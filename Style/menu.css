@@ -1,0 +1,44 @@
+.vertical_menu
+{
+	width: 180px; /*width of menu*/
+	border-style: solid solid none solid;
+	border-color: #94AA74;
+	border-size: 1px;
+	border-width: 1px;
+}
+
+.vertical_menu ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+	
+.vertical_menu li a
+{
+	font: bold 12px tahoma, Arial, Helvetica, sans-serif;
+	display: block;
+	background: transparent url(http://store.blueb.co.kr/data/201009/IJ12846667513972.vertical_menu.gif) 100% 0;
+	height: 24px; /*Set to height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	padding: 4px 0 4px 10px;
+	line-height: 24px; /*Set line-height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	text-decoration: none;
+}	
+
+.vertical_menu li a:link, .vertical_menu li a:visited 
+{
+	color: #5E7830;
+}
+
+.vertical_menu li a:hover
+{
+	color: #26370A;
+	background-position: 100% -32px;
+}
+
+	
+.vertical_menu li a.selected
+{
+	color: #26370A;
+	background-position: 100% -64px;
+}
