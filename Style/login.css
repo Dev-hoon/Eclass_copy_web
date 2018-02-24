@@ -1,0 +1,9 @@
+#input_box{
+	border: 1px solid gray;
+	padding-bottom: 15px;
+}
+
+#input_box>*{
+	padding-left : 30px;
+	padding-top : 15px;
+      }
