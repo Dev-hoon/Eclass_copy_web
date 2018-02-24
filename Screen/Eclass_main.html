@@ -1,0 +1,1576 @@
+<!doctype html>
+
+
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+-->
+<html lang="ko">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta content="한국외국어 대학교 " name>
+  <meta content="noindex, nofollow" name>
+  <!-- 설치된 IE중 최신버전 렌더링 설정 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="Copyright(C) IMAXSOFT" name>
+  <link rel="shortcut icon" href="/ilos/favicon.ico?v=1.1" />
+  <link rel="apple-touch-icon-precomposed" href="/ilos/images/m/e-Class-icon.png" />
+  <title>한국외국어 대학교 e-Class System </title>
+
+
+  <link type="text/css" rel="stylesheet" href="../Style/ass.css">
+  <link type="text/css" rel="stylesheet" href="../Style/green.css">
+  <link type="text/css" rel="stylesheet" href="../Style/default.css">
+  <script type="text/javascript" src="../js/common.js"></script>
+  <script type="text/javascript" src="../js/ctrl.js"></script>
+  <script type="text/javascript" src="../js/util.js"></script>
+  <script type="text/javascript" src="../js/session_check.js"></script>
+  <script type="text/javascript" src="../js/util_check.js"></script>
+  <script type="text/javascript" src="../js/fck_util.js"></script>
+  <script type="text/javascript" src="../js/hrd_check.js"></script>
+  <script type="text/javascript" src="../js/hrd_ctrl.js"></script>
+  <script type="text/javascript" src="../js/srcZoom.js"></script>
+
+  <style>
+    #top2m1,#top2m2,#top2m3 {display:none;}
+
+    .gnb-top-class {
+      width: 176px; height: 31px;
+      font-family: "맑은 고딕","Malgun Gothic",verdana;
+      font-size: 14px;
+      font-weight: bold; text-align: center;
+      padding-bottom: 6px;
+      cursor: pointer;
+      letter-spacing: -1px;
+      /*   text-shadow: 0px 0px 2px #000; */
+    }
+
+    .gnb-top-class > div {
+      width: 176px; height: 25px;
+      padding-top: 6px;
+    }
+    .gnb-top-class > div > a { color: #fff; text-decoration: none; }
+    .gnb-top-class-off  { background-color: #b6b6b6;}
+
+    .gnb-sub-class{
+      margin-right: 2px;
+      background-color: #fff;
+      border: 1px solid #e1e1e1;
+      border-bottom:1px solid #A9A9A9;
+      font-family: "맑은 고딕","Malgun Gothic",verdana;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: -1;
+      height: 21px;
+      cursor: pointer;
+      padding-top: 1px;
+    }
+    .gnb-sub-class > a{
+      padding: 3px 15px 5px 15px;
+      text-align: center;
+      overflow: hidden;
+      width: 100%;
+      text-decoration: none;
+    }
+    .gnb-sub-class-last{ margin-right: 0 !important;}
+  </style>
+  <script>
+      //top navi
+
+      function top2menuView(a){ //2차메뉴보기
+          if(this.id){
+              eidStr = this.id;
+              var _$aa = eidStr.lastIndexOf("m",eidStr.length)+1;
+              eidNum=eidStr.substring(_$aa,eidStr.length);
+              a = parseInt(eidNum);
+          }
+          top2menuHideAll();
+          top1Menu = document.getElementById("top1m"+a);
+          top2Menu = document.getElementById("top2m"+a);
+          ann=a;
+          if (a=0) { //메인은2차메뉴활성화안함
+          } else {
+              if (top1Menu) {
+                  top1Menu.firstChild.className = "site-background-color";
+                  if (top2Menu) { top2Menu.style.display = 'inline'; }
+              }
+          }
+      }
+
+      function top2menuHide(a){ //2차메뉴감추기
+          if(this.id && a != 1){
+              eidStr = this.id;
+              var _$aa = eidStr.lastIndexOf("m",eidStr.length)+1;
+              eidNum=eidStr.substring( _$aa,eidStr.length);
+              a = parseInt(eidNum);
+          }
+          top2menuHideAll();
+          top1Menu = document.getElementById("top1m"+a);
+          top2Menu = document.getElementById("top2m"+a);
+          top1MenuCurr = document.getElementById("top1m0");
+          top2MenuCurr = document.getElementById("top2m0");
+          //if(a<10){ann='0'+a;} else {ann=''+a;}
+          ann=a;
+          if (top1Menu) {
+              top1Menu.firstChild.className = "gnb-top-class-off";
+              if (top2Menu) { top2Menu.style.display = 'none'; }
+              if (top1MenuCurr) {
+              }
+              if (top2MenuCurr) { top2MenuCurr.style.display = 'inline'; }
+          }
+      }
+
+      function top2menuHideAll(){ //2차메뉴모두감추기
+          top1menuEl = document.getElementById("top1menu").getElementsByTagName("ul");
+          for (i=1;i<=top1menuEl.length;i++){
+              top1Menu = document.getElementById("top1m"+i);
+              top2Menu = document.getElementById("top2m"+i);
+              //if(i<10){inn='0'+i;} else {inn=''+i;}
+              inn=i;
+              if (top1Menu){
+                  top1Menu.firstChild.className = "gnb-top-class-off";
+                  if (top2Menu) { top2Menu.style.display = 'none'; }
+              }
+          }
+      }
+
+      function initTopMenu() {
+          top1menuEl = document.getElementById("top1menu").getElementsByTagName("ul");
+          for (i=1;i<=top1menuEl.length;i++){
+              top1Menu = document.getElementById("top1m"+i);
+              top2Menu = document.getElementById("top2m"+i);
+              if (top1Menu) {
+                  top1Menu.onmouseover = top1Menu.onfocus = top2menuView;
+                  top1Menu.onmouseout  = top2menuHide;
+                  if (top2Menu) {
+                      top2Menu.onmouseover = top2Menu.onfocus = top2menuView;
+                      top2Menu.onmouseout  = top2menuHide;
+                  }
+              }
+          }
+      }
+
+      function depth2over(a,b){
+          var de2Str = document.getElementById("top2m"+a);
+          var de2StrLi = de2Str.getElementsByTagName("li");
+          for(var i=1;i<de2StrLi.length+6;i++){
+              if(b==i){
+
+              }
+          }
+      }
+
+      function depth2out(a,b){
+          var de2Str = document.getElementById("top2m"+a);
+          var de2StrLi = de2Str.getElementsByTagName("li");
+          for(var i=1;i<de2StrLi.length+6;i++){
+              if(b==i){
+
+              }
+          }
+      }
+      function noDoubleClick(){
+
+      }
+      function pageGo(url){
+          document.location.href=url;
+      }
+  </script>
+
+  <script
+        src="http://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script><!--
+<script
+        src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>-->
+  <link type="text/css" href="../Style/jquery-ui.min.css" rel="stylesheet" />
+ <!-- <script type="text/javascript" src="../js/jquery-1.11.3.min.js" ></script>-->
+  <!--<script type="text/javascript" src="../js/jquery-ui-1.11.4.min.js"  ></script>-->
+  <script type="text/javascript" src="../js/pop_calendar_ko.js"  ></script>
+  <script type="text/JavaScript" src="../js/jqueryBlockUI.js"></script>
+  <script type="text/JavaScript" src="../js/spin.js"></script>
+
+  <script>
+      $(function() {
+          //testBlockUI();
+          $("span.button button").mouseover(function() {
+              $(this).css("color", "#FFFFFF");
+
+              var icon = $(this).find("img");
+              if(icon != null) {
+                  icon.attr("src", "/ilos/images/common/btn_icon_over.gif");
+              }
+
+          });
+          $("span.button button").mouseout(function() {
+              $(this).css("color", "#f8f8f8");
+
+              var icon = $(this).find("img");
+              if(icon != null) {
+                  icon.attr("src", "/ilos/images/common/btn_icon.gif");
+              }
+
+          });
+          resetListStyle();
+          resetListStyle("board-content");
+      });
+
+      function resetListStyle(root) {
+          if (!root) {
+              root = "textviewer";
+          }
+          $("." + root + " ol").each(function() {
+//     console.log("===========");
+//     console.log($(this).css("list-style-type"));
+//     console.log($(this).attr("type"));
+              if(!$(this).css("list-style-type") || $(this).css("list-style-type") == "none") {
+                  if($(this).attr("type") == '1') {
+                      $(this).find("li").css("list-style-type","decimal");
+                  }
+                  if($(this).attr("type") == 'A') {
+                      $(this).find("li").css("list-style-type","upper-alpha");
+                  }
+                  if($(this).attr("type") == 'a') {
+                      $(this).find("li").css("list-style-type","lower-alpha");
+                  }
+                  if($(this).attr("type") == 'I') {
+                      $(this).find("li").css("list-style-type","upper-roman");
+                  }
+                  if($(this).attr("type") == 'i') {
+                      $(this).find("li").css("list-style-type","lower-roman");
+                  }
+                  if(!$(this).attr("type")) {
+                      $(this).find("li").css("list-style-type","decimal");
+                  }
+              }
+              else {
+                  $(this).find("li").css("list-style-type",$(this).css("list-style-type"));
+              }
+          });
+
+          $("." + root + " ul").each(function() {
+              if(!$(this).css("list-style-type") || $(this).css("list-style-type") == "none") {
+                  if($(this).attr("type") == 'circle') {
+                      $(this).find("li").css("list-style-type","circle");
+                  }
+                  if($(this).attr("type") == 'square') {
+                      $(this).find("li").css("list-style-type","square");
+                  }
+                  if($(this).attr("type") == 'disc') {
+                      $(this).find("li").css("list-style-type","disc");
+                  }
+
+                  if(!$(this).attr("type")) {
+                      $(this).find("li").css("list-style-type","disc");
+                  }
+              }
+              else {
+                  $(this).find("li").css("list-style-type",$(this).css("list-style-type"));
+              }
+
+          });
+      }
+
+      function testBlockUI(){
+          //가운데 로딩이미지 세팅구역
+          var opts = {
+              lines: 11, // The number of lines to draw
+              length: 5, // The length of each line
+              width: 4, // The line thickness
+              radius: 10, // The radius of the inner circle
+              corners: 1, // Corner roundness (0..1)
+              rotate: 0, // The rotation offset
+              direction: 1, // 1: clockwise, -1: counterclockwise
+              color: '#fff', // #rgb or #rrggbb or array of colors
+              speed: 1.2, // Rounds per second
+              trail: 36, // Afterglow percentage
+              shadow: false, // Whether to render a shadow
+              hwaccel: false, // Whether to use hardware acceleration
+              className: 'spinner', // The CSS class to assign to the spinner
+              zIndex: 2e9, // The z-index (defaults to 2000000000)
+              top: '50%', // Top position relative to parent
+              left: '50%' // Left position relative to parent
+          };
+          var target = document.getElementById('progress');
+          var spinner = new Spinner(opts).spin(target);
+
+          var left1 =
+              //블록UI 세팅구역
+              $.blockUI.defaults = {
+                  message: $('#progress'),
+                  css: {
+                      padding:        0,
+                      margin:         0,
+                      width:          'auto',
+                      top:            Number((Number(window.innerHeight)/2)-30),
+                      left:           Number((Number(window.innerWidth)/2)-30),
+                      textAlign:      'center',
+                      color:          '#000',
+                      border:         'none',
+                      backgroundColor:'auto',
+                      cursor:         'wait'
+                  },
+                  overlayCSS:  {
+                      background: 'auto',
+                      opacity:         1,
+                      cursor:          'wait'
+                  },
+                  showOverlay: true,
+
+                  growlCSS: {
+                      width:    '350px',
+                      top:      '20px',
+                      left:     '',
+                      right:    '20px',
+                      border:   'none',
+                      padding:  '5px',
+                      opacity:   0.6,
+                      cursor:    null,
+                      color:    '#fff',
+                      '-webkit-border-radius': '10px',
+                      '-moz-border-radius':    '10px',
+                      'background' : 'url(/ilos/images/common/check_icon.png) no-repeat 20px 15px #000'
+                  },
+
+                  // IE issues: 'about:blank' fails on HTTPS and javascript:false is s-l-o-w
+                  // (hat tip to Jorge H. N. de Vasconcelos)
+                  iframeSrc: /^https/i.test(window.location.href || '') ? 'javascript:false' : 'about:blank',
+
+                  // force usage of iframe in non-IE browsers (handy for blocking applets)
+                  forceIframe: true,
+
+                  // z-index for the blocking overlay
+                  baseZ: 1000,
+
+                  // set these to true to have the message automatically centered
+                  centerX: true, // <-- only effects element blocking (page block controlled via css above)
+                  centerY: true,
+
+                  // allow body element to be stetched in ie6; this makes blocking look better
+                  // on "short" pages.  disable if you wish to prevent changes to the body height
+                  allowBodyStretch: true,
+
+                  // enable if you want key and mouse events to be disabled for content that is blocked
+                  bindEvents: true,
+
+                  // be default blockUI will supress tab navigation from leaving blocking content
+                  // (if bindEvents is true)
+                  constrainTabKey: true,
+
+
+                  // disable if you don't want to show the overlay
+                  showOverlay: true,
+
+                  // if true, focus will be placed in the first available input field when
+                  // page blocking
+                  focusInput: true,
+
+                  // suppresses the use of overlay styles on FF/Linux (due to performance issues with opacity)
+                  // no longer needed in 2012
+                  // applyPlatformOpacityRules: true,
+
+                  // callback method invoked when fadeIn has completed and blocking message is visible
+                  onBlock: null,
+
+                  // callback method invoked when unblocking has completed; the callback is
+                  // passed the element that has been unblocked (which is the window object for page
+                  // blocks) and the options that were passed to the unblock call:
+                  //   onUnblock(element, options)
+                  onUnblock: null,
+
+                  // don't ask; if you really must know: http://groups.google.com/group/jquery-en/browse_thread/thread/36640a8730503595/2f6a79a77a78e493#2f6a79a77a78e493
+                  quirksmodeOffsetHack: 4,
+
+                  // class name of the message block
+                  blockMsgClass: 'blockMsg',
+
+                  // if it is already blocked, then ignore it (don't unblock and reblock)
+                  ignoreIfBlocked: false
+              };
+          //$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);    //아작스 중복호출 방지
+
+      }
+
+      // 글 내용중 img 태그 팝업
+      function txtImagePopView(url){
+          $.ajax({
+              url: "/ilos/co/txt_image_pop_form.acl",
+              type: "POST",
+              data: {
+                  URL : url,
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(data) {
+                  $("#txtImagePopForm").append(data);
+              },
+              error : function(x, o, e) {
+                  alert(x.status + " : "+ o +" : "+e);
+              }
+          });
+      }
+
+      // 탭 라인 길이 설정
+      function setTabLine() {
+          var width = $(".tab-wrap").outerWidth();
+          var tabCnt = 0;
+          var tabWidth = 0;
+
+          $(".tab").each(function() {
+              tabCnt++;
+              tabWidth += $(this).outerWidth();
+          });
+
+          $(".tab-line").css("width", width - tabWidth + tabCnt - 1);
+          $(".tab-line").css("height", $(".tab").innerHeight() + 1);
+      }
+
+  </script>
+  <div id="progress" style="display: none; width: 80px; height: 80px; -webkit-border-radius: 10px; border-radius:10px; background-color: #000;"></div>
+  <link type="text/css" rel="stylesheet" href="../Style/schedule.css">
+  <link type="text/css" rel="stylesheet" href="../Style/main.css">
+  <script type="text/javascript">
+      $(function() {
+          addCalendar("SCH_DT");
+          getMainSchedule('to');
+      });
+
+      //달력 조회
+      function getMainSchedule(dv,date){
+          $("#loading").show();
+          //월별 이동버튼을 클릭하였을 때
+          if(typeof date === 'undefined'){
+              var days = [31,28,31,30,31,30,31,31,30,31,30,31];
+              var year = new Date().getFullYear();
+              var month= new Date().getMonth()+1;
+              var day  = new Date().getDate();
+
+              //오늘보기
+              if(dv == 'to'){
+                  if(Number(month) < 10) month = '0'+Number(month);
+                  if(Number(day) < 10)   day   = '0'+Number(day);
+              }
+              else{
+                  var a = getSchDate();
+
+                  //이전달
+                  if(dv == 'bf'){
+                      if(a[1] == 1){
+                          year  = Number(a[0])-1;
+                          month = 12;
+                      }
+                      else{
+                          year  = a[0];
+                          month = Number(a[1])-1;
+                      }
+                  }
+                  //다음달
+                  else if(dv == 'at'){
+                      if(a[1] == 12){
+                          year  = Number(a[0])+1;
+                          month = 1;
+                      }
+                      else{
+                          year  = a[0];
+                          month = Number(a[1])+1;
+                      }
+                  }
+                  //등록 또는 수정시 보고있던 일자로 유지 조회
+                  else{
+                      year  = a[0];
+                      month = a[1];
+                  }
+
+                  if( month==2 && ( year%4==0 && year%100!=0 || year%400==0 ) ) {
+                      days[1] = 29;
+                  }
+
+                  if(days[month-1] < a[2]) day = days[month-1];
+                  else day = a[2];
+
+                  if(Number(month) < 10) month = '0'+Number(month);
+                  if(Number(day) < 10)   day   = '0'+Number(day);
+              }
+          }
+          //날짜를 클릭하였을 때
+          else{
+              var a = date.split('-');
+              var year = a[0];
+              var month= a[1];
+              var day  = a[2];
+              if(Number(month) < 10) month = '0'+Number(month);
+              if(Number(day) < 10)   day   = '0'+Number(day);
+          }
+
+          $.ajax({
+              url: "/ilos/main/main_schedule.acl",
+              type: "POST",
+              data: {
+                  year     : year,
+                  month    : month,
+                  day      : day,
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(data) {
+                  $(".shedule_form").html(data);
+                  getWeekDay(year, month, day);
+                  getMainScheduleView(year, month, day);
+              },
+              error: function(data) {
+                  alert("error22:"+data);
+              }
+          });
+          $("#loading").hide();
+      }
+
+      //목록 조회
+      function getMainScheduleList(dv){
+          $("#loading").show();
+          //월별 이동버튼을 클릭하였을 때
+          var days = [31,28,31,30,31,30,31,31,30,31,30,31];
+          var year = new Date().getFullYear();
+          var month= new Date().getMonth()+1;
+          var day  = new Date().getDate();
+
+          var a = getSchDate();
+
+          //오늘보기
+          if(dv == 'to'){
+              if(Number(month) < 10) month = '0'+Number(month);
+              if(Number(day) < 10)   day   = '0'+Number(day);
+          }
+          else{
+              //이전달
+              if(dv == 'bf'){
+                  if(a[1] == 1){
+                      year  = Number(a[0])-1;
+                      month = 12;
+                  }
+                  else{
+                      year  = a[0];
+                      month = Number(a[1])-1;
+                  }
+              }
+              //다음달
+              else if(dv == 'at'){
+                  if(a[1] == 12){
+                      year  = Number(a[0])+1;
+                      month = 1;
+                  }
+                  else{
+                      year  = a[0];
+                      month = Number(a[1])+1;
+                  }
+              }
+              //등록 또는 수정시 보고있던 일자로 유지 조회
+              else{
+                  year  = a[0];
+                  month = a[1];
+              }
+
+              if( month==2 && ( year%4==0 && year%100!=0 || year%400==0 ) ) {
+                  days[1] = 29;
+              }
+
+              if(days[month-1] < a[2]) day = days[month-1];
+              else day = a[2];
+
+              if(Number(month) < 10) month = '0'+Number(month);
+              if(Number(day) < 10)   day   = '0'+Number(day);
+          }
+
+          $.ajax({
+              url: "/ilos/main/main_schedule_list.acl",
+              type: "POST",
+              data: {
+                  year     : year,
+                  month    : month,
+                  viewDt   : year + '' + month,
+                  day      : day,
+                  encoding : "utf-8"
+              },
+              async: true,
+              success: function(data) {
+                  $(".shedule_form").html(data);
+                  getWeekDay(year, month, day);
+              },
+              error: function(data) {
+                  alert("error22:"+data);
+              }
+          });
+          $("#loading").hide();
+      }
+
+      //날짜 내역 조회
+      function getMainScheduleView(y,m,d){
+          $.ajax({
+              url: "/ilos/main/main_schedule_view.acl",
+              type: "POST",
+              data: {
+                  viewDt   : getSchDate()[0]+''+getSchDate()[1]+''+getSchDate()[2],
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(data) {
+                  $(".schedule_txt_view").html(data);
+              },
+              error: function(data) {
+                  alert("error22:"+data);
+              }
+          });
+      }
+
+      //날짜 가져오기
+      var getSchDate = function(){
+          var date = $("#Month").html().split('.');
+          var y = date[0];
+          var m = date[1];
+          var d = $("#Day").html();
+
+          if(Number(m) < 10) m = "0" + Number(m);
+          if(Number(d) < 10) d = "0" + Number(d);
+
+          return [y,m,d];
+      }
+
+      //요일 표시
+      function getWeekDay(y,m,d){
+          var languge = "ko";
+          var weekDay = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
+
+          if(languge == 'en') weekDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          if(languge == 'ja') weekDay = ["日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日"];
+
+          $("#Month").html(y+'.'+Number(m));
+          $("#Day").html(Number(d));
+
+          if(Number(m) < 10) m = "0" + Number(m);
+          if(Number(d) < 10) d = "0" + Number(d);
+
+          var date = y+'/'+m+'/'+d;
+          $("#WeekDay").html("("+weekDay[new Date(date).getDay()]+")");
+      }
+
+      //등록폼
+      function insertFormSchedule(){
+          if($(".schedule_txt_insert").css("display") === 'block') {
+              cencleSchedule('','inst');
+          }
+          else{
+              $(".schedule_txt_view").hide();
+
+              $("#SCH_DT").val(getSchDate()[0] + '.' + getSchDate()[1] + '.' + getSchDate()[2]);
+              $(".schedule_txt_insert").show();
+          }
+      }
+
+      //취소 컨트롤 inst 등록/ cal 달력/ list 목록
+      function cencleSchedule(a,b){
+          if(typeof b !== 'undefined'){
+              if(b == 'inst'){
+                  getMainScheduleView(getSchDate()[0], getSchDate()[1], getSchDate()[2]);
+
+                  $(".schedule_txt_view").show();
+                  $(".schedule_txt_insert").hide();
+
+                  $("#SCH_DT").val("2018.02.18");
+                  $("#SCH_HH").val("20");
+                  $("#SCH_MM").val("16");
+
+                  $("#SCH_TITLE").val("");
+                  $("#SCH_CONTENTS").html("");
+              }
+              if(b == 'cal'){
+                  $("#view_"+a).show();
+                  $("#update_"+a).hide();
+
+                  $(".hide-Schedule").hide();
+                  $(".show-Schedule").show();
+                  $(".schedule-show-control").show();
+                  $(".schedule-show-control").attr("change","show");
+              }
+              if(b == 'list'){
+                  $("#view_"+a).show();
+                  $("#update_"+a).hide();
+              }
+          }
+      }
+
+      //날짜 내역 상세 보기
+      function changeDetile(a,b,c,obj,dv,i){
+          var c = $(obj).attr("change");
+          if(c == 'show') {
+              $("#hide_"+i+"_"+dv+"_"+a+"_"+b).show();
+              $("#view_"+i+"_"+dv+"_"+a+"_"+b).show();
+              $("#show_"+i+"_"+dv+"_"+a+"_"+b).hide();
+              $(obj).attr("change","hide");
+          }
+          else{
+              $("#show_"+i+"_"+dv+"_"+a+"_"+b).show();
+              $("#view_"+i+"_"+dv+"_"+a+"_"+b).hide();
+              $("#hide_"+i+"_"+dv+"_"+a+"_"+b).hide();
+              $(obj).attr("change","show");
+              cencleSchedule('1_'+b,c);
+          }
+      }
+
+      //수정폼 컨트롤 inst 등록/ cal 달력/ list 목록
+      function updateFormSchedule(a,b){
+          if(b == 'inst'){}
+          if(b == 'cal'){
+              $("#view_"+a).hide();
+              $("#update_"+a).show();
+              $(".changeDetile").hide();
+              $(".schedule-show-control").hide();
+          }
+          if(b == 'list'){
+              $("#view_1_"+a).hide();
+              $("#update_1_"+a).show();
+          }
+      }
+
+      //등록하기
+      function insertSchedule(){
+          $.ajax({
+              url: "/ilos/main/schedule_insert.acl",
+              type: "POST",
+              data: {
+                  SCH_TITLE    : $("#SCH_TITLE").val(),
+                  SCH_CONTENTS : $("#SCH_CONTENTS").val(),
+                  SCH_START_DT : $("#SCH_DT").val().replaceAll(".", ""),
+                  SCH_START_TM : $("#SCH_HH").val()+$("#SCH_MM").val(),
+                  SCH_DV_CD    : 1,
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(data){
+                  if(data.isError){
+                      alert(data.message);
+                  }else{
+                      getMainSchedule();
+                  }
+              },
+              error : function(html) {
+                  alert("error:"+html);
+              }
+          });
+      }
+
+      //수정하기
+      function updateSchedule(a,b){
+          $.ajax({
+              url: "/ilos/main/schedule_update.acl",
+              type: "POST",
+              data: {
+                  SCH_SEQ      : a.replaceAll("1_", ""),
+                  SCH_TITLE    : $("#SCH_TITLE_"+a).val(),
+                  SCH_CONTENTS : $("#SCH_CONTENTS_"+a).val(),
+                  SCH_START_DT : $("#SCH_DT_"+a).val().replaceAll(".", ""),
+                  SCH_START_TM : $("#SCH_HH_"+a).val()+$("#SCH_MM_"+a).val(),
+                  SCH_DV_CD    : 1,
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(data){
+                  if(data.isError){
+                      alert(data.message);
+                  }else{
+                      if(b == 'cal'){  //달력형
+                          getMainSchedule();
+                      }
+                      else{//목록형
+                          getMainScheduleList();
+                      }
+                  }
+              },
+              error : function(html) {
+                  alert("error:"+html);
+              }
+          });
+      }
+
+      //삭제하기
+      function deleteSchedule(a,b){
+          if(!confirm("정말로 삭제하시겠습니까?")) {
+              return;
+          }
+
+          $.ajax({
+              url: "/ilos/main/schedule_delete.acl",
+              type: "POST",
+              data: {
+                  SCH_SEQ  : a,
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(data){
+                  if(data.isError){
+                      alert(data.message);
+                  }else{
+                      if(b == 'cal'){  //달력형
+                          getMainSchedule();
+                      }
+                      else{//목록형
+                          getMainScheduleList();
+                      }
+                  }
+              },
+              error : function(html) {
+                  alert("error:"+html);
+              }
+          });
+      }
+  </script>
+  <script>
+      var langth = 0;
+      $(function() {
+          siteLinkIndex();
+
+          if (getCookie('ncook_20180213135006') != 'done') {
+              //popNotice();
+              popNotice2('28','20180213135006',langth);
+              langth += 30;
+          }
+
+
+
+          $("#courseMgt").click(function() {
+              document.location.href="/ilos/ocw/courseware_list_form.acl";
+          });
+
+          $("#mypageMgt").click(function() {
+              document.location.href="/ilos/mp/myinfo_form.acl";
+          });
+
+          $("#guideMgt").click(function() {
+              document.location.href="/ilos/guide/guide_main_form.acl";
+          });
+          $(".icon").hover(function(){
+              $(this).find(".icon-nm").addClass("site-font-color");
+              var src = "/ilos/images/themes/green/main/"
+              $(this).find("img").attr("src" , src + $(this).find("img").attr("val"));
+          },function(){
+              var src = "/ilos/images/main/"
+              $(this).find(".icon-nm").removeClass("site-font-color");
+              $(this).find("img").attr("src" , src + $(this).find("img").attr("val"));
+          });
+      });
+
+      //캘린더 이동
+      function eclassRoom5(KJKEY,returnURI,url) {
+          $.ajax({
+              url: url,
+              type: "POST",
+              data: {
+                  KJKEY : KJKEY,
+                  returnURI : returnURI,
+                  encoding : "utf-8" },
+              async: false,
+              success: function(data){
+                  if(data.isError) {
+                      alert(data.message);
+                      document.location.href = "/ilos/main/main_form.acl";
+                  }
+                  else {
+                      document.location.href = data.returnURL;
+                  }
+              },
+              error : function(data) {
+                  alert("error22:"+data);
+              }
+          });
+      }
+
+      function popNotice() {
+          $.ajax({
+              url: "/ilos/popup/pop_notice.acl",
+              type: "POST",
+              data: {  encoding : "utf-8"
+              },
+              async: false,
+              success: function(html){
+                  $("#popup_notice").html(html);
+              },
+              error : function(html) {
+                  alert("error:"+html);
+              }
+          });
+      }
+
+      //레이어 공지 팝업
+      function popNotice2(ARTL_NUM,UPT_DTM,langth) {
+          $.ajax({
+              url: "/ilos/popup/notice_popup_form.acl",
+              type: "POST",
+              data: {
+                  ARTL_NUM : ARTL_NUM,
+                  UPT_DTM  : UPT_DTM,
+                  langth:langth,
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(html){
+                  $("#popup_notice2_"+ARTL_NUM).append(html);
+              },
+              error : function(x, o, e){
+                  alert(x.status + " : "+ o +" : "+e);
+              }
+          });
+      }
+
+      function siteLinkIndex() {
+          $.ajax({
+              url: "/ilos/main/site_link_form.acl",
+              type: "POST",
+              data: {
+                  encoding : "utf-8"
+              },
+              async: false,
+              success: function(html){
+                  $("#site_link_index").append(html);
+              },
+              error : function(x, o, e){
+                  alert(x.status + " : "+ o +" : "+e);
+              }
+          });
+
+      }
+      function linkGo(flag){
+          if(flag == "1"){
+              document.location.href = "/ilos/community/notice_list_form.acl";
+          }else if(flag == "2"){
+              document.location.href = "/ilos/mp/lectured_list_form.acl";
+          }else if(flag == "3"){
+              document.location.href = "/ilos/mp/myinfo_form.acl";
+          }else if(flag == "4"){
+              document.location.href = "/ilos/community/total_survey_list_form.acl";
+          }else if(flag == "5"){
+              document.location.href = "/ilos/st/main/course_ing_list_form.acl";
+          }else if(flag == "6"){
+              document.location.href = "/ilos/st/main/course_ing_non_list_form.acl";
+          }else if(flag == "7"){
+              document.location.href = "/ilos/guide/guide_main_form.acl";
+          }else if(flag == "8"){
+              document.location.href = "/ilos/mp/course_register_list_form.acl";
+          }else if(flag == "9"){
+              document.location.href = "/ilos/ad/contents/contents2_list_form.acl";
+          }
+      }
+  </script>
+  <style>
+    #loading {
+      position: absolute;
+      background-color: #f0faf0;
+      filter: alpha(opacity=30);
+      -moz-opacity: 0.3;
+      -khtml-opacity: 0.3;
+      opacity: 0.3;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      display: none;
+      top: 0;
+      text-align: center;
+      overflow: hidden;
+    }
+    #loadingimg{
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background: url('/ilos/images/loading.png') no-repeat center center;
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+
+
+<script type="text/javascript">
+
+    jQuery(function($){
+        $('#skipNavigation li a').click(function(){
+            $($('a[href^=#]').attr('href')).attr('tabindex','0').focus();
+        });
+    });
+
+</script>
+
+<ul id="skipNavigation">
+  <li><a href="#containerWrap">본문내용 바로가기</a></li>
+  <li><a href="#gnbIndex">주메뉴 바로가기</a></li>
+</ul>
+<hr>
+<div style="position: absolute;  z-index:1012; top:0; left:0; display: none;" id="popup_room"></div>
+<div id="wrap">
+  <div id="headerWrap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        <!--
+        $(function() {
+            $(window).scroll( function () {
+                $(this).scrollTop() > 400 ? $(".scrollup").fadeIn() : $(".scrollup").fadeOut();
+            });
+
+            $(".scrollup").click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+            });
+
+            $("#LANG").change( function() {
+                $.ajax({
+                    url: "/ilos/main/lang_change.acl",
+                    type: "POST",
+                    data: {
+                        LANG :  $("#LANG").val(),
+                        encoding : "utf-8"
+                    },
+                    async: false,
+                    success: function(data){
+                        document.location.href = location.href;
+                    },
+                    error : function(html) {
+                        alert("error:"+html);
+                    }
+                });
+            });
+
+            $("#user").click(function() {
+                //$("#pPop").show();
+                document.location.href = "/ilos/mp/myinfo_form.acl";
+            }).css("cursor","pointer");
+            $("#user_photo").click(function() {
+                //$("#pPop").show();
+                document.location.href = "/ilos/mp/myinfo_form.acl";
+            }).css("cursor","pointer");
+            /*
+            $("#pPop").mouseleave(function() {
+                $(this).fadeOut(800,"linear",function(){});
+            });
+            */
+
+            //close event setting
+            var closeMEevnt = function (){
+                $(document).keydown(function(e){
+                    if (e.keyCode != 27) return true;
+                    if($("#outerMenual").css("display") === 'block') {
+                        $("#outerMenual").hide("blind",300, closeMenual );
+                    }
+                    return false;
+                });
+            }( );
+            //closeMEevnt();
+        });
+
+        function closeMenual(){
+            $(".menual-full-layer").remove();
+        };
+
+        function menual_pop_close(){
+            $("#outerMenual").hide("blind",300, closeMenual );
+        };
+
+        function menualPop(i,w,l,t){
+            if($("#outerMenual").css("display") == 'none'){
+                $.ajax({
+                    url: "/ilos/menual/menual_main_form.acl",
+                    type: "POST",
+                    data: {
+                        SCREEN_ID : i,
+                        w : w,
+                        link : l,
+                        t : t,
+                        encoding : "utf-8"
+                    },
+                    async: false,
+                    success: function(data){
+                        if(data.isError) {
+                            alert(data.message);
+                        }
+                        else {
+                            $("#outerMenual").html(data);
+                        }
+                    },
+                    error : function(e,o,x) {
+                        alert("error:" + e.status + ":"+ o+ ":" + x);
+                    }
+                });
+                $("#outerMenual").show("blind",300);
+            }
+            else {
+                $("#outerMenual").hide("blind",300, closeMenual );
+            }
+        }
+
+
+        //-->
+    </script>
+    <div id="header">
+
+      <h1 class="h_ko"><a href="/ilos/main/main_form.acl"><img src="/ilos/images/osms/hufs/ko/logo.gif" alt="e-class system"></a></h1>
+      <div class="languages">
+
+        <!-- 관리자일 경우-->
+
+        <form method="post" name="langform" id="langform"  action="/ilos/main/lang_change.acl" onsubmit="return false;">
+
+
+          <select name="LANG" id="LANG" title="언어 선택" style="background-color:#4C4C4C; height: 21px;">
+
+            <option value="ko" selected>한국어</option>
+            <option value="en" >English</option>
+
+
+          </select>
+        </form>
+      </div>
+
+
+      <div class="utillmenu">
+        <ul>
+          <li><a href="/ilos/main/member/login_form.acl"><img src="/ilos/images/ko/utill_login.gif" alt="로그인"></a></li>
+
+
+        </ul>
+
+
+
+      </div>
+      <a class="scrollup">Back to the top</a>
+    </div>
+    <hr>
+
+    <!-- Start Menual form -->
+    <div style="width:500px; float: right;  position: absolute; z-index: 1000; margin-left: 451px; margin-top: 129px; ">
+      <div id="outerMenual" style="position:absolute; z-index: 8; display: none; padding-top: 13px; clear: both;"></div>
+    </div>
+    <!-- End Menual form -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="gnbIndex" style="height: 61px;">
+      <h2>주 메뉴</h2>
+      <ul id="top1menu" style="margin-left: 216px; width: 543px;">
+        <li style="overflow: hidden;">
+          <div class="gnb-top-class" id="top1m1" onclick="pageGo('/ilos/st/main/course_ing_list_form.acl'); return false;"><div class="gnb-top-class-off"><a href="/ilos/st/main/course_ing_list_form.acl">교육현황</a></div></div>
+
+          <ul id="top2m1" style="left: 216px">
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/st/main/course_ing_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/st/main/course_ing_list_form.acl">개설과목검색</a>
+            </li>
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/ocw/courseware_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/ocw/courseware_list_form.acl">OCW</a>
+            </li>
+            <li class="gnb-sub-class gnb-sub-class-last" onclick="pageGo('/ilos/st/schedule/academic_calendar_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/st/schedule/academic_calendar_list_form.acl">학사일정</a>
+            </li>
+          </ul>
+        </li>
+        <li class="space">
+          <div class="gnb-top-class" id="top1m2" onclick="pageGo('/ilos/community/notice_list_form.acl'); return false;"><div class="gnb-top-class-off"><a href="/ilos/community/notice_list_form.acl">커뮤니티</a></div></div>
+          <ul id="top2m2">
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/community/notice_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/community/notice_list_form.acl">공지사항</a>
+            </li>
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/community/qna_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/community/qna_list_form.acl">질의응답</a>
+            </li>
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/community/material_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/community/material_list_form.acl">자료실</a>
+            </li>
+
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/community/share_group_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/community/share_group_list_form.acl">소모임</a>
+            </li>
+            <li class="gnb-sub-class gnb-sub-class-last" onclick="pageGo('/ilos/community/total_survey_list_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/community/total_survey_list_form.acl">설문</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="space">
+          <div class="gnb-top-class" id="top1m3" onclick="pageGo('/ilos/introduce/introduce.acl'); return false;"><div class="gnb-top-class-off"><a href="/ilos/introduce/introduce.acl">소개</a></div></div>
+          <ul id="top2m3">
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/introduce/introduce.acl'); return false;">
+              <a class="site-link2" href="/ilos/introduce/introduce.acl" >소개</a>
+            </li>
+            <li class="gnb-sub-class" onclick="pageGo('/ilos/guide/guide_main_form.acl'); return false;">
+              <a class="site-link2" href="/ilos/guide/guide_main_form.acl">FAQ</a>
+            </li>
+            <li class="gnb-sub-class gnb-sub-class-last" onclick="pageGo('/ilos/introduce/sitemap.acl'); return false;">
+              <a class="site-link2" href="/ilos/introduce/sitemap.acl">사이트맵</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <script type="text/javascript">
+          $(function() {
+              initTopMenu();
+              $("#top2m2").css("left", (973-$("#top2m2").width())/2+"px");
+              $("#top2m3").css("left", (973-$("#top2m3").width())-213+"px");
+              top2menuHide(1);
+          });
+      </script>
+    </div>
+    <hr>
+
+  </div>
+  <div id="containerWrap">
+    <div id="container">
+      <div id="contentsIndex">
+        <h2>본문 내용</h2>
+        <div class="locationmap">현재 본문 위치 : <strong>홈</strong></div>
+        <!-- Start Edit -->
+        <div class="index-leftarea02">
+
+          <div style="overflow: hidden; position: relative; width: 578px;">
+            <div class="shedule_form">
+              <div style="overflow: hidden; padding: 12px 15px;" class="site-background-color">
+                <div style="float: left; font-size: 18px; font-weight: bold; color: #fff; font-family: malgun gothic; ">일정</div>
+                <input id="show_schedule_list" type="image" src="/ilos/images/common/view_list.png" style="width: 16px; height: 16px; float: right; margin-top: 2px; border-radius: 0px;" title="목록보기" onclick="getMainScheduleList('');">
+              </div>
+            </div>
+            <div id="loading"><div id="loadingimg"></div></div>
+          </div>
+
+          <div class="m-box2">
+            <div class="title-01">
+              <div class="bar site-background-color"></div>
+              <span>공지사항</span>
+              <div class="whole" style="float: right; margin-top: 8px;">
+                <a href="/ilos/community/notice_list_form.acl"><img src="/ilos/images/ko/btn_all.gif" alt="공지사항"></a>
+              </div>
+            </div>
+            <ol>
+
+              <li style="padding-left: 10px; background: url('/ilos/images/main/ul_dot.png') no-repeat 0 49%;">
+                <em style="font-weight: normal;">
+                  <a class="site-link" href="/ilos/community/notice_view_form.acl?ARTL_NUM=2230131">
+                    ★★ 2018학년도 1학기 eClass 운영일정[2/12(월) 10:00 ~]을 안내합니다.
+                  </a>
+                </em>
+                <span class="date">2018.01.25</span>
+              </li>
+
+              <li style="padding-left: 10px; background: url('/ilos/images/main/ul_dot.png') no-repeat 0 49%;">
+                <em style="font-weight: normal;">
+                  <a class="site-link" href="/ilos/community/notice_view_form.acl?ARTL_NUM=2010200">
+                    2017학년도 제2학기 온라인강의 로그인 및 학습안내
+                  </a>
+                </em>
+                <span class="date">2017.08.23</span>
+              </li>
+
+              <li style="padding-left: 10px; background: url('/ilos/images/main/ul_dot.png') no-repeat 0 49%;">
+                <em style="font-weight: normal;">
+                  <a class="site-link" href="/ilos/community/notice_view_form.acl?ARTL_NUM=1046685">
+                    [사이버강의] 주말 수강 시 유의사항
+                  </a>
+                </em>
+                <span class="date">2015.03.02</span>
+              </li>
+
+              <li style="padding-left: 10px; background: url('/ilos/images/main/ul_dot.png') no-repeat 0 49%;">
+                <em style="font-weight: normal;">
+                  <a class="site-link" href="/ilos/community/notice_view_form.acl?ARTL_NUM=105038">
+                    ★★ 청강관련 사용방법 안내드립니다.
+                  </a>
+                </em>
+                <span class="date">2011.09.07</span>
+              </li>
+
+              <li style="padding-left: 10px; background: url('/ilos/images/main/ul_dot.png') no-repeat 0 49%;">
+                <em style="font-weight: normal;">
+                  <a class="site-link" href="/ilos/community/notice_view_form.acl?ARTL_NUM=2191108">
+                    2017-겨울학기 eClass 운영일정[12/15(금) 17:00 ~]을 안내합니다.
+                  </a>
+                </em>
+                <span class="date">2017.12.06</span>
+              </li>
+
+              <li style="padding-left: 10px; background: url('/ilos/images/main/ul_dot.png') no-repeat 0 49%;">
+                <em style="font-weight: normal;">
+                  <a class="site-link" href="/ilos/community/notice_view_form.acl?ARTL_NUM=2152489">
+                    설문조사 경품 당첨 안내
+                  </a>
+                </em>
+                <span class="date">2017.11.17</span>
+              </li>
+
+              <li style="padding-left: 10px; background: url('/ilos/images/main/ul_dot.png') no-repeat 0 49%;">
+                <em style="font-weight: normal;">
+                  <a class="site-link" href="/ilos/community/notice_view_form.acl?ARTL_NUM=2009551">
+                    2017학년도 2학기 eClass 운영일정[8/21(월) 10:00 ~]을 안내합니다.
+                  </a>
+                </em>
+                <span class="date">2017.07.24</span>
+              </li>
+
+
+              <li style="border-bottom: 1px dotted #E6E6E6;"></li>
+            </ol>
+          </div>
+
+
+
+
+
+          <div id="site_link_index"></div>
+        </div>
+
+        <div class="index-rightarea02">
+
+          <div class="icon-box">
+            <div class="title-01" style="margin: 19px 19px 0px 19px;">
+              <span class="site-font-color" >Quick Menu</span>
+              <div style="clear: both;'"></div>
+              <div style="border: 1px solid #F1F1F1; margin-top: 15px;"></div>
+            </div>
+
+            <div class="icon" onclick="linkGo('5');">
+              <img src="/ilos/images/main/lecturesubject.png" val="lecturesubject.png">
+              <div class="icon-nm">청강신청</div>
+            </div>
+            <div class="icon-bar">
+              <img src="/ilos/images/main/line.png" style="height: 54px; width: 2px;">
+            </div>
+            <div class="icon" onclick="linkGo('6');">
+              <img src="/ilos/images/main/non_subject.png" val="non_subject.png">
+              <div class="icon-nm">비정규과목</div>
+            </div>
+            <div class="icon-bar">
+              <img src="/ilos/images/main/line.png" style="height: 54px; width: 2px;">
+            </div>
+            <div class="icon" onclick="linkGo('4');">
+              <img src="/ilos/images/main/total_survey.png" val="total_survey.png">
+              <div class="icon-nm">전체설문</div>
+            </div>
+            <div class="icon" onclick="linkGo('7');">
+              <img src="/ilos/images/main/menual.png" val="menual.png">
+              <div class="icon-nm">FAQ</div>
+            </div>
+          </div>
+
+
+          <script>
+              $(function(){
+                  ocwTab(1);
+                  shareTab(1);
+              });
+
+              function ocwTab(flag){
+                  $(".box-tab1 .tab1").removeClass("sel-tab");
+                  $(".box-tab1 .tab2").removeClass("sel-tab");
+                  $(".box-tab1 .tab3").removeClass("sel-tab");
+                  $(".box-tab1 .tab1").removeClass("site-font-color");
+                  $(".box-tab1 .tab2").removeClass("site-font-color");
+                  $(".box-tab1 .tab3").removeClass("site-font-color");
+                  $(".box-tab1 .tab1").css("font-weight" ,"normal");
+                  $(".box-tab1 .tab2").css("font-weight" ,"normal");
+                  $(".box-tab1 .tab3").css("font-weight" ,"normal");
+                  $(".box-tab1 .tab"+flag).addClass("sel-tab");
+                  $(".box-tab1 .tab"+flag).addClass("site-font-color");
+                  $(".box-tab1 .tab"+flag).css("font-weight" ,"bold");
+                  $.ajax({
+                      url: "/ilos/main/ocw_list.acl",
+                      type: "POST",
+                      async: false,
+                      data: {
+                          FLAG : flag,
+                          encoding : "utf-8"
+                      },
+                      success: function(data){
+                          $("#ocw-list").html(data);
+                      },
+                      error : function(html) {
+                          alert("error:"+html);
+                      }
+                  });
+              }
+              function shareTab(flag){
+                  $(".box-tab2 .tab1").removeClass("sel-tab");
+                  $(".box-tab2 .tab2").removeClass("sel-tab");
+                  $(".box-tab2 .tab3").removeClass("sel-tab");
+                  $(".box-tab2 .tab1").removeClass("site-font-color");
+                  $(".box-tab2 .tab2").removeClass("site-font-color");
+                  $(".box-tab2 .tab3").removeClass("site-font-color");
+                  $(".box-tab2 .tab1").css("font-weight" ,"normal");
+                  $(".box-tab2 .tab2").css("font-weight" ,"normal");
+                  $(".box-tab2 .tab3").css("font-weight" ,"normal");
+                  $(".box-tab2 .tab"+flag).addClass("sel-tab");
+                  $(".box-tab2 .tab"+flag).addClass("site-font-color");
+                  $(".box-tab2 .tab"+flag).css("font-weight" ,"bold");
+                  $.ajax({
+                      url: "/ilos/main/share_list.acl",
+                      type: "POST",
+                      async: false,
+                      data: {
+                          FLAG : flag,
+                          encoding : "utf-8"
+                      },
+                      success: function(data){
+                          $("#share-list").html(data);
+                      },
+                      error : function(html) {
+                          alert("error:"+html);
+                      }
+                  });
+              }
+              function groupInfoPop(grpId, memDiv) {
+                  if (memDiv=='0' || memDiv=='S' || memDiv=='1') {
+                      document.location.href = "/ilos/community/share_list_form.acl?CLUB_GRP_ID=" + grpId + "&start=&display=&SCH_CLUB_VAL=&encoding=utf-8";
+                  } else if (memDiv=='3') {
+                      alert('재가입 불가 대상입니다.');
+                      return false;
+                  } else {
+                      $.ajax({
+                          url: "/ilos/community/share_group_info_form.acl",
+                          type: "POST",
+                          data: {
+                              CLUB_GRP_ID : grpId,
+                              encoding : "utf-8"
+                          },
+                          async: false,
+                          success: function(html) {
+                              $("#popup_room").append(html);
+                          },
+                          error : function(x, o, e) {
+                              alert(x.status + " : "+ o +" : "+e);
+                          }
+                      });
+                  }
+              }
+          </script>
+
+
+
+          <div class="m-box1" style="margin-top: 20px; padding-bottom: 19px;">
+            <div class="title-01" style="margin: 15px 19px 15px 19px;">
+              <span class="site-font-color">OCW</span>
+              <div class="more"><a href="/ilos/ocw/courseware_list_form.acl"><img src="/ilos/images/main/more.png" alt="OCW 목록이동"></a></div>
+            </div>
+            <div class="box-tab1">
+              <div class="tab1" val="1" onclick="ocwTab('1');">신규</div>
+              <div class="tab2" val="2" onclick="ocwTab('2');">인기</div>
+              <div class="tab3" val="3" onclick="ocwTab('3');">관심</div>
+            </div>
+            <div id="ocw-list"></div>
+          </div>
+
+
+        </div>
+        <!-- //End Edit -->
+      </div>
+    </div>
+  </div>
+  <div id="footerWrap">
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(function() {
+        });
+
+        function popupOpen(url) {
+            var openNewWindow = window.open('about:blank');
+            openNewWindow.location.href=url;
+            /*
+            var popUrl = "http://home.chungwoon.ac.kr/www/getHomeContents.do?target=menu07_07&page=home&tab=0";
+            var popOption = "width=900, height=500, resizable=no, scrollbars=yes, status=no;";    //팝업창 옵션(optoin)
+            window.open(popUrl,"",popOption);
+            */
+        }
+    </script>
+    <div id="footer">
+      <h2>홈페이지이용 관련 메뉴</h2>
+      <div class="left-footer">
+        <div><img src="/ilos/images/osms/hufs/ko/tit_system.png" alt=""></div>
+        <div class="copyright">
+          <p>COPYRIGHT 2012 Hankuk Univ of Foreign Studies</p>
+          <p>서울캠퍼스 (02450) 서울시 동대문구 이문로 107 <BR> 글로벌캠퍼스 (17035) 경기도 용인시 처인구 모현읍 외대로 81 <BR> e-class문의 : 02-2173-2238 | 사이버강의문의 : 02-2173-2616 </p>
+
+        </div>
+      </div>
+      <div class="right-footer">
+
+        <div class="site-map-box" style="float: right;">
+          <h1>소개</h1>
+          <ul>
+            <li><a href="/ilos/introduce/introduce.acl">소개</a></li>
+            <li><a href="/ilos/guide/guide_main_form.acl">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="site-map-box" style="float: right;">
+          <h1>커뮤니티</h1>
+          <ul>
+            <li><a href="/ilos/community/notice_list_form.acl">공지사항</a></li>
+            <li><a href="/ilos/community/qna_list_form.acl">질의응답</a></li>
+            <li><a href="/ilos/community/material_list_form.acl">자료실</a></li>
+
+            <li><a href="/ilos/community/share_group_list_form.acl">소모임</a></li>
+            <li><a href="/ilos/community/total_survey_list_form.acl">설문</a></li>
+          </ul>
+        </div>
+        <div class="site-map-box" style="float: right;">
+          <h1>교육현황</h1>
+          <ul>
+            <li><a href="/ilos/st/main/course_ing_list_form.acl">개설과목검색</a></li>
+            <li><a href="/ilos/ocw/courseware_list_form.acl">OCW</a></li>
+            <li><a href="/ilos/st/schedule/academic_calendar_list_form.acl">학사일정</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="popup_notice"></div>
+
+<div style="position: absolute;  z-index:9; top:0; left:0;">
+
+  <div class="popup_notice2" id="popup_notice2_28" style="float: left;"></div>
+
+</div>
+</body>
+</html>

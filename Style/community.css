@@ -1,0 +1,573 @@
+@charset "utf-8";
+
+
+/* subcontent */
+div.applybox {
+    width:849px;
+    padding:14px 12px 14px 17px;
+    border:1px solid #dfdfdf;
+    overflow:hidden;
+}
+
+*html div.applybox {
+    padding:14px 12px 40px 17px;
+}
+
+div.applybox .apply-list {
+    width:100%;
+    margin:0;
+    padding-bottom:14px;
+    font-size:95%;
+    color:#888;
+    overflow:hidden;
+    background:url('/ilos/images/community/bg_apply_dot.gif') no-repeat 0 bottom;
+}
+
+div.apply-list .apply-photo {
+    float:left;
+    margin-right:26px;
+}
+
+div.apply-list .apply-create {
+    float:left;
+    margin-top:9px;
+}
+
+*html div.apply-list .apply-create {
+    margin-top:10px;
+}
+
+div.apply-list .apply-create ul {
+    clear:both;
+    float:left;
+    margin:0;
+    padding:1px 0;
+}
+
+*html div.apply-list .apply-create ul {
+    padding:1px 0 2px 0;
+}
+
+*+html div.apply-list .apply-create ul {
+    padding:1px 0 2px 0;
+}
+
+div.apply-list .apply-create ul li {
+    float:left;
+    width:220px;
+    padding-left:7px;
+    letter-spacing:-1px;
+    background:url('/ilos/images/common/bul/bul_box.gif') no-repeat 0 7px;
+}
+
+*html div.apply-list .apply-create ul li {
+    background:url('/ilos/images/common/bul/bul_box.gif') no-repeat 0 6px;
+}
+
+*+html div.apply-list .apply-create ul li {
+    background:url('/ilos/images/common/bul/bul_box.gif') no-repeat 0 6px;
+}
+
+:root div.apply-list .apply-create ul li {
+    background:url('/ilos/images/common/bul/bul_box.gif') no-repeat 0 6px;
+}
+
+body:first-of-type div.apply-list .apply-create ul li {
+    background:url('/ilos/images/common/bul/bul_box.gif') no-repeat 0 6px;
+}
+
+div.apply-list .apply-create .create-day {
+    font-family:"tahoma";
+    letter-spacing:normal;
+    color:#9c9c9c;
+}
+
+div.apply-list .apply_btn {
+    clear:both;
+    float:left;
+    width:320px;
+    margin-top:25px;
+    font-size:0;
+    line-height:0;
+}
+
+*html div.apply-list .apply_btn {
+    margin-top:24px;
+}
+
+div.apply-list .apply_btn img {
+    float:left;
+    margin-right:6px;
+}
+
+div.applybox .apply_cont {
+    padding:21px 0 0 1px;
+    line-height:18px;
+    letter-spacing:-1px;
+}
+
+*html div.applybox .apply_cont {
+    padding:22px 0 0 1px;
+}
+
+div.listbox {
+    width:100%;
+    margin-top:25px;
+    border-bottom:2px solid #dadada;
+}
+
+div.listbox .list_top {
+    width:865px;
+    padding:5px 0 4px 15px;
+    border-top:2px solid #dadada;
+    border-bottom:1px solid #dadada;
+    background-color:#f9f9f9;
+    overflow:hidden;
+}
+
+*html div.listbox .list_top {
+    padding:6px 0 4px 15px;
+}
+
+div.list_top .list_title {
+    float:left;
+    padding-top:1px;
+    font-weight:bold;
+}
+
+div.list_top .list_btn {
+    float:right;
+    padding-right:8px;
+}
+
+*html div.list_top .list_btn {
+    margin-top:-1px;
+}
+
+div.list_top .list_btn img {
+    float:left;
+    margin-right:4px;
+}
+
+div.listbox .list_cont {
+    padding:18px 0 26px 16px;
+    line-height:170%;
+}
+
+*html div.listbox .list_cont {
+    padding:19px 0 25px 16px;
+}
+
+div.commentbox {
+    width:100%;
+    margin-top:24px;
+    padding-bottom:13px;
+    border-bottom:2px solid #dadada;
+    word-break: break-all;
+}
+
+*html div.commentbox {
+    margin-top:25px;
+}
+
+div.commentbox .comment {
+    padding-bottom:6px;
+    background:url('/ilos/images/community/bg_comment_dot.gif') no-repeat 0 bottom;
+}
+
+*html div.commentbox .comment {
+    padding-bottom:5px;
+}
+
+div.commentbox .comment p {
+    padding-left:25px;
+    font-weight:bold;
+    font-size:95%;
+    letter-spacing:-1px;
+    background:url('/ilos/images/common/bul/icon_comment.gif') no-repeat 0 1px;
+}
+
+*html div.commentbox .comment p {
+    background:url('/ilos/images/common/bul/icon_comment.gif') no-repeat 0 0;
+}
+
+div.commentbox .comment-list {
+    margin-top:12px;
+    padding:0 0 18px 1px;
+    background:url('/ilos/images/community/bg_comment_dot.gif') no-repeat 0 bottom;
+}
+
+*html div.commentbox .comment-list {
+    margin-top:15px;
+    padding:0 0 17px 1px;
+}
+
+div.comment-list .comment-name {
+    font-size:95%;
+    font-weight:bold;
+    letter-spacing:-1px;
+}
+
+div.comment-list .comment-name span {
+    font-size:95%;
+    font-weight:normal;
+    font-family:"tahoma";
+    letter-spacing:normal;
+    color:#9c9c9c;
+}
+
+div.comment-list .comment-addr {
+    margin-top:2px;
+    color:#5f5f5f;
+    line-height:18px;
+}
+
+*html div.comment-list .comment-addr {
+    margin-top:4px;
+}
+
+*+html div.comment-list .comment-addr {
+    margin-top:3px;
+}
+
+div.commentbox img {
+    margin-left:6px;
+    padding-bottom:1px;
+    font-size:0;
+    line-height:0;
+    vertical-align:middle;
+}
+
+*html div.commentbox img {
+    padding-bottom:0;
+}
+
+*+html div.commentbox img {
+    padding-bottom:0;
+}
+
+div.commentbox .confirm {
+    margin-top:13px;
+}
+
+*html div.commentbox .confirm {
+    margin-top:11px;
+}
+
+*+html div.commentbox .confirm {
+    margin-top:11px;
+}
+
+div.commentbox .confirm .btn-confirm {
+    margin-left:3px;
+}
+
+#contents_share {
+    float: right;
+    width: 698px;
+    _height: 300px;
+    min-height: 300px;
+    padding: 0;
+    display: inline;
+}
+
+
+div.listbox2 {
+    width:518px;
+    margin-top:25px;
+    border:2px solid #dadada;
+}
+
+div.listbox2 .list_top {
+    width:503px;
+    padding:5px 0 4px 15px;
+    border-bottom:1px solid #dadada;
+    background-color:#f9f9f9;
+    overflow:hidden;
+}
+
+*html div.listbox2 .list_top {
+    padding:6px 0 4px 15px;
+}
+
+div.listbox2 .list_cont {
+    padding: 15px;
+    line-height:170%;
+}
+
+div.commentbox2 {
+    width:100%;
+    margin-top:24px;
+    padding-bottom:13px;
+}
+
+*html div.commentbox2 {
+    margin-top:25px;
+}
+
+div.commentbox2 .comment2 {
+    padding-bottom:6px;
+    background:url('/ilos/images/community/bg_comment_dot.gif') no-repeat 0 bottom;
+}
+
+*html div.commentbox2 .comment2 {
+    padding-bottom:5px;
+}
+
+div.commentbox2 .comment2 p {
+    padding-left:25px;
+    font-weight:bold;
+    font-size:95%;
+    letter-spacing:-1px;
+    background:url('/ilos/images/common/bul/icon_comment.gif') no-repeat 0 1px;
+}
+
+*html div.commentbox2 .comment2 p {
+    background:url('/ilos/images/common/bul/icon_comment.gif') no-repeat 0 0;
+}
+
+div.comment2 p {
+    padding-left:25px;
+    font-weight:bold;
+    font-size:95%;
+    letter-spacing:-1px;
+    background:url('/ilos/images/common/bul/icon_comment.gif') no-repeat 0 1px;
+}
+
+*html div.comment2 p {
+    background:url('/ilos/images/common/bul/icon_comment.gif') no-repeat 0 0;
+}
+
+div.commentbox2 .comment-list {
+    margin-top:12px;
+    padding:0 0 18px 1px;
+    background:url('/ilos/images/community/bg_comment_dot.gif') no-repeat 0 bottom;
+}
+
+*html div.commentbox2 .comment-list {
+    margin-top:15px;
+    padding:0 0 17px 1px;
+}
+
+div.commentbox2 img {
+    margin-left:6px;
+    padding-bottom:1px;
+    font-size:0;
+    line-height:0;
+    vertical-align:middle;
+}
+
+*html div.commentbox2 img {
+    padding-bottom:0;
+}
+
+*+html div.commentbox2 img {
+    padding-bottom:0;
+}
+
+div.commentbox2 .confirm {
+    margin-top:13px;
+}
+
+*html div.commentbox2 .confirm {
+    margin-top:11px;
+}
+
+*+html div.commentbox2 .confirm {
+    margin-top:11px;
+}
+
+div.commentbox2 .confirm .btn-confirm {
+    margin-left:3px;
+}
+
+#content_share_left{
+    float: left;
+    width:522px;
+}
+
+#content_share_right{
+    float: right;
+    width:156px;
+    margin-left: 10px;
+}
+
+.list_bottom{
+    padding: 0 15px 15px 15px;
+}
+
+.arrow_box {
+    position: relative;
+    background: #f9f9f9;
+    padding: 5px;
+}
+
+.arrow_box:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.arrow_box:after {
+    border-color: rgba(249, 249, 249, 0);
+    border-bottom-color: #f9f9f9;
+    border-width: 14px;
+    left: 5%;
+    margin-left: -14px;
+}
+
+div.nav_wrap{
+    border:1px solid #d0d0d0;
+    margin-top:10px;
+    border-radius: 5px;
+}
+
+div.nav_title{
+    height:26px;
+    padding-top:10px;
+    padding-left:5px;
+    font-weight:bold;
+    background-color:#ececec;
+    border-radius:3px 3px 0 0;
+    border-bottom:1px solid #d0d0d0;
+}
+
+div.nav_cont{
+    padding-top:10px;
+    padding-left:5px;
+    padding-right:5px;
+    background-color:#ffffff;
+    border-radius:0 0 3px 3px;
+}
+
+
+/*community botton*/
+.share_btn {background:url(/ilos/images/community/share_btn.png) no-repeat;width:47px;height:30px;text-align:center;overflow:hidden;}
+.share_btn div {font-size:12px;font-weight:normal;margin-top:7px;margin-right:1px;border:0px solid red;letter-spacing:-1px; color: #fff;}
+
+
+/* Share Group List */
+a.grp-link {
+    font-family: '돋움', 'Dotum';
+    font-size: 11px;
+    color: #666;
+    text-decoration: none;
+}
+a.grp-link:active, a.grp-link:focus {
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+a.grp-link:hover {
+    color: #C13736;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: -1px;
+}
+
+.share_grp {
+    width: auto;
+    padding-top: 20px;
+}
+.grp_main {
+    width: 660px;
+    float: left;
+    overflow: hidden;
+}
+.grp_search {
+    width: 654px;
+    background-color: #E7E7E7;
+    margin: 0 auto;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+    text-align: center;
+    padding: 7px 0;
+    margin-bottom: 15px;
+}
+.title:hover {
+    color: #C13736;
+    font-weight: bold;
+}
+#SCH_CLUB_VAL {
+    width: 250px;
+    height: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.grp_side {
+    width: 215px;
+    float: right;
+    overflow: hidden;
+}
+.grp_large_btn {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #58626E;
+    border : 1px solid #3F4752;
+    border-radius: 5px;
+}
+.grp_large_txt {
+    color: #FFFFFF;
+    font-family: '맑은 고딕', 'Malgun Gothic';
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 7px;
+    text-align: center;
+}
+.grp_large_icon {
+    position: relative;
+    top: 2px;
+}
+.grp_menu_img {
+    width: 212px;
+    height: 36px;
+    background-image: url('/ilos/images/community/gathering_bg.png');
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.grp_menu_title {
+    font-family: '맑은 고딕', 'Malgun Gothic';
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    color: #C13736;
+    padding-top: 9px;
+    padding-left: 20px;
+}
+.grp_menu_list {
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+.grp_listzone {
+    overflow: hidden;
+}
+.grp_list_img img {
+    float: left;
+    border: 1px solid #CFCFCF;
+    margin-right: 10px;
+}
+.grp_list:hover {
+    color: #C13736;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.grp_list {
+    padding-bottom: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.grp_title span {
+    font-family: '맑은 고딕', 'Malgun Gothic';
+    font-size: 14px;
+}
+.grp_txt span{
+    font-family: '돋움', 'Dotum';
+    font-size: 12px;
+}

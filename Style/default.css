@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* default buttom image */
+#footerWrap {
+  position:relative;
+  width:973px;
+  height:285px;
+  margin:0;
+  background:url('/ilos/images/common/bg_footerwarp.jpg') no-repeat 0 top;
+}
+
+/* student buttom image */
+#footerWrap01 {
+  position:relative;
+  width:973px;
+  height:204px;
+  margin:0;
+  background:url('/ilos/images/common/bg_footerwarp.jpg') no-repeat 0 top;
+}
+
+/* professor buttom image */
+#footerWrap02 {
+	position:relative;
+	width:973px;
+	height:285px;
+	margin:0;
+	background:url('/ilos/images/common/bg_footerwarp.jpg') no-repeat 0 top;
+}
+
+
+#header .h_ko {
+  position:absolute;
+  left:393px;
+  top:12px;
+  width:190px;
+  height:110px;
+  font-size:0;
+  line-height:0;
+}
+
+#header .h_en {
+  position:absolute;
+  left:346px;
+  top:12px;
+  width:285px;
+  height:102px;
+  font-size:0;
+  line-height:0;
+}
+
+#header .h_ja {
+  position:absolute;
+  left:346px;
+  top:12px;
+  width:285px;
+  height:102px;
+  font-size:0;
+  line-height:0;
+}

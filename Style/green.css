@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+* {
+    margin:0;
+    padding:0;
+/*font-family: Verdana, 'Apple SD Gothic Neo', '¸¼Àº °íµñ', 'Malgun Gothic', dotum;*/
+}
+
+.site-border{border:solid 1px #3C8794 !important;}
+.site-border-top{border-top:solid 1px #3C8794 !important;}
+.site-border-bottom{border-bottom:solid 1px #3C8794 !important;}
+.site-border-left{border-left:solid 1px #3C8794 !important;}
+.site-border-right{border-right:solid 1px #3C8794 !important;}
+
+.site-font-color, .site-mouseover-color:hover,
+a.site-link:hover, a.site-link:active, a.site-link:focus,
+a.site-link2:hover, a.site-link2:active, a.site-link2:focus {color:#3C8794 !important; text-decoration:none;}
+a.site-link {
+  color:#666;
+  text-decoration:none;
+}
+
+a.site-link2 {
+  color:#9C9C9C;;
+  text-decoration:none;
+}
+.site-background-color{background-color:#3C8794 !important;}
+.subtitle_img {background-color:#3C8794 !important;}
+
+/***********global**************/
+#lnb .leftmenu ul li a:hover, #lnb .leftmenu ul li a.on,
+#lnb .leftmenu-admin ul li a:hover, #lnb .leftmenu-admin ul li a.on {
+	display:block;
+/* 	margin-bottom:1px; */
+	padding:5px 0 3px 16px;
+	font-weight:normal;
+	color:#fff;
+	letter-spacing:0px;
+	text-decoration:none;
+	background:#3C8794 url('/ilos/images/common/lnb/submenu_icon_on.gif') no-repeat 7px 10px;
+}
+
+#content_location .locationmap strong,
+#content_location .locationmap strong a {
+	color:#3C8794 !important;
+	letter-spacing:-1px;
+	text-decoration:none;
+}
+
+
+#content_location .locationmap strong a:active,
+#content_location .locationmap strong a:hover,
+#content_location .locationmap strong a:focus {
+	font-weight:bold;
+	color:#3C8794 !important;
+}
+
+.home {background-color:#3C8794 !important;}
+
+/* main search background */
+.searchbox-background {
+  background:url('/ilos/images/themes/green/bg_search.gif') no-repeat 0 0;
+}
+
+
+/* Control Button */
+span.button, span.button button {
+  position:relative;
+  /*margin:0;*/
+  /*display:-moz-inline-box;*/
+  display:inline-block !important;
+  border:0;
+  color:#f8f8f8;
+  font: 9pt 'µ¸¿ò', 'dotum', 'Sans-serif';
+  white-space:nowrap;
+  text-shadow: rgba(51,51,51,.9) -1px -1px -5px, rgba(203,203,203,.9) 1px 1px 5px;
+  background:url('/ilos/images/themes/green/bg_btn.gif') no-repeat left top;
+  vertical-align:middle;
+}
+
+/* login */
+div.loginform-login {
+	width:738px;
+	margin-top:50px;
+	padding-bottom:158px;
+	overflow:hidden;
+	background:url('/ilos/images/themes/green/bg_login.gif') no-repeat left top;
+}
+
+
+/* join */
+div.loginform-join {
+  width:738px;
+  margin-top:50px;
+  padding-bottom:169px;
+  overflow:hidden;
+  background:url('/ilos/images/themes/green/bg_join.gif') no-repeat left top;
+}
+
+
+/* find-idpw */
+div.loginform-find {
+  width:738px;
+  margin-top:50px;
+  padding-bottom:86px;
+  overflow:hidden;
+  background:url('/ilos/images/themes/green/bg_findid.gif') no-repeat left top;
+}
+div.loginform-find2 {
+  width:738px;
+  margin-top:50px;
+  padding-bottom:86px;
+  overflow:hidden;
+  background:url('/ilos/images/themes/green/bg_findid2.gif') no-repeat left top;
+}

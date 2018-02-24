@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+.schedule_txt_box {
+  clear: both; 
+  font-family: dotum, arial, sans-serif; 
+  overflow: hidden; 
+  width: 520px; 
+  padding: 12px; 
+  margin-top: 15px;
+  background-color: #fafafa; 
+  border: 1px solid #f3f3f3; 
+  border-radius: 3px; 
+  font-size: 10pt; 
+  color: #666; 
+}
+.shedule_calendar {overflow: hidden; padding: 15px; /* min-height: 210px; */ border: 1px solid #ccc; border-top: none; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;}
+.shedule_form     {overflow: hidden; position: relative; width: 578px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.save_schedule    {float: left; font-size: 9pt; color: #424242; border: 1px solid #ddd; border-radius: 3px; min-width: 25px; height: 14px; padding: 5px 7px; cursor: pointer; margin-right: 5px;}
+.cencle_schedule  {float: left; font-size: 9pt; color: #424242; border: 1px solid #ddd; border-radius: 3px; min-width: 25px; height: 14px; padding: 5px 7px; cursor: pointer; background-color: #f5f5f5;}
+
+.schedule_view_list_date {font-family: '¸¼Àº °íµñ','Malgun Gothic',verdana; font-size: 13px; font-weight: bold; color: #616161;}
+.schedule_view_list_box  {overflow: hidden; margin-top: 12px;}
+.schedule_view_title     {font-family: dotum, arial, sans-serif; font-size: 10pt; font-weight: bold;}
+.schedule_view_txt       {font-family: dotum, arial, sans-serif; font-size: 9pt; font-weight: normal;}
+
+.schedule_view_detail_box{min-width: 483px; max-width: 514px; border: 1px solid #CCC; padding: 10px 15px; background-color: #fafafa; border-radius: 3px; /* min-height: 100px; */ margin-top: 7px; position: relative; m}
+.schedule_view_triangle  {background: url('/ilos/images/common/triangle.png') no-repeat; width: 10px; height: 8px; position: absolute; top: -8px; left: 38px;}
+.schedule_view_div_line  {height: 1px; width: 100%; border-bottom: 1px dotted #C6C6C6; margin: 15px 0;}
+
+.schedule-Detail-Box {overflow: hidden; margin: 5px 15px; width: 456px; border-top: 1px solid #d7d7d7; border-bottom: 1px solid #dbdbdb; background-color: #fff; padding: 10px 15px; display: none;}
+
+.main-Schedule    {clear:both; width:100%; table-layout:fixed\9;}
+.main-Schedule th {text-align: center; vertical-align: top !important; font-size: 12px; font-weight: bold; height: 29px;}
+.main-Schedule td {text-align: center; vertical-align: top !important; font-size: 12px; height: 29px;}
+
+.today_cal  {border-color: #f3928a !important; color: #ffffff !important; background-color: #f3928a !important;}
+.select_cal {border-color: #f3928a !important; color: #f3928a !important; }
+
+.schedule_date_box {overflow: hidden; float: left; padding: 0 30px 0 15px; width: 146px;}
+.move_schedule_box {overflow: hidden; text-align: center; padding: 0 16px; clear: both; width: 115px; margin: 0 auto 7px auto;}
+.move_schedule  {width: 16px; height: 17px; float: left;}
+.year_month_txt {overflow: hidden; font-weight: bold; font-size: 15px; margin: 0px 5px; float: left; margin-top: -1px; font-family: '¸¼Àº °íµñ','Malgun Gothic',verdana; cursor: pointer; width: 69px;}
+
+.txt_schedule_box {overflow: hidden; text-align: center; clear: both; line-height: normal !important; width: 147px; margin: 0 auto 37px auto;}
+#Day     {overflow: hidden; font-weight: bold; font-size: 40px; font-family: '¸¼Àº °íµñ','Malgun Gothic',verdana;}
+#WeekDay {font-weight: bold; font-size: 14px; color: #b3b3b3; font-family: '¸¼Àº °íµñ','Malgun Gothic',verdana;}
+
+.schedule_btn_box {overflow: hidden; text-align: center; clear: both; width: 147px;}
+.add_schedule_btn {overflow: hidden; width: 68px; height: 30px; cursor: pointer; border: 1px solid #ddd; text-align: center; color: #999; margin: 0 auto;}
+.go_today  {float: left; overflow: hidden; width: 68px; height: 25px; border: 1px solid #ddd; text-align: center; font-family: '¸¼Àº °íµñ','Malgun Gothic',verdana; padding-top: 5px;}
+.cur_today {background-color: #eee; color: #999;}
+.non_today {background-color: #fff; color: #424242; cursor: pointer; display: none;}

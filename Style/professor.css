@@ -1,0 +1,851 @@
+@charset "utf-8";
+
+
+/* layout */
+#submain-contents {
+
+    width:758px;
+    /*
+    _height:784px;
+    min-height:784px;
+    */
+    _height:300px;
+    min-height:300px;
+    margin:0 22px 0 0;
+    padding:0;
+    display:inline;
+}
+
+#submain-contents h2,
+#submain-contents .submain-locationmap {
+    visibility:hidden;
+    height:0;
+    font-size:0;
+    line-height:0;
+}
+
+#submain-contents .hide-quicktop {
+    visibility:hidden;
+    height:0;
+    font-size:0;
+    line-height:0;
+}
+
+div.submain-leftarea {
+    float:left;
+
+    width:502px;
+    /*
+   height:784px;
+   */
+    _height:300px;
+    min-height:300px;
+
+    margin:0 15px 0 0;
+    padding:0;
+}
+
+div.submain-rightarea {
+    float:left;
+    width:259px;
+    /*
+    height:784px;
+    */
+
+    _height:300px;
+    min-height:300px;
+
+    margin:0;
+    padding:0;
+}
+
+.lecture_week {
+    width:47px;
+    border:1px solid #ddd;
+    margin-right:10px;
+    margin-bottom:10px;
+    float:left;
+    text-align:center;
+    padding:8px 0;
+    cursor:pointer;
+    background-color:#fdfdfd;
+    -moz-border-radius-bottomright: 4px/*{cornerRadius}*/;
+    -webkit-border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-bottomleft: 4px/*{cornerRadius}*/;
+    -webkit-border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-topright: 4px/*{cornerRadius}*/;
+    -webkit-border-top-right-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-top-right-radius: 4px/*{cornerRadius}*/;
+    border-top-right-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-topleft: 4px/*{cornerRadius}*/;
+    -webkit-border-top-left-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-top-left-radius: 4px/*{cornerRadius}*/;
+    border-top-left-radius: 4px/*{cornerRadius}*/;
+}
+
+/* submain */
+div.submain-notice {
+    border-bottom: 1px #d2d2d2 solid;
+    border-left: 1px #d2d2d2 solid;
+    border-right: 1px #d2d2d2 solid;
+    border-top: 1px #d2d2d2 solid;
+    -moz-border-radius-topright: 4px/*{cornerRadius}*/;
+    -webkit-border-top-right-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-top-right-radius: 4px/*{cornerRadius}*/;
+    border-top-right-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-topleft: 4px/*{cornerRadius}*/;
+    -webkit-border-top-left-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-top-left-radius: 4px/*{cornerRadius}*/;
+    border-top-left-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-bottomright: 4px/*{cornerRadius}*/;
+    -webkit-border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-bottomleft: 4px/*{cornerRadius}*/;
+    -webkit-border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 14px 19px 15px 19px;
+    /*  background:url('/ilos/images/index/bg_notice.gif') no-repeat 0 top; */
+}
+.submain-notice-first{
+    border-top: 1px #d2d2d2 solid;
+    -moz-border-radius-topright: 4px/*{cornerRadius}*/;
+    -webkit-border-top-right-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-top-right-radius: 4px/*{cornerRadius}*/;
+    border-top-right-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-topleft: 4px/*{cornerRadius}*/;
+    -webkit-border-top-left-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-top-left-radius: 4px/*{cornerRadius}*/;
+    border-top-left-radius: 4px/*{cornerRadius}*/;
+}
+.submain-notice-last{
+    -moz-border-radius-bottomright: 4px/*{cornerRadius}*/;
+    -webkit-border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    border-bottom-right-radius: 4px/*{cornerRadius}*/;
+    -moz-border-radius-bottomleft: 4px/*{cornerRadius}*/;
+    -webkit-border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    -khtml-border-bottom-left-radius: 4px/*{cornerRadius}*/;
+    border-bottom-left-radius: 4px/*{cornerRadius}*/;
+}
+
+div.submain-right{
+    border: 1px #d2d2d2 solid;
+    -moz-border-radius-bottomright: 5px/*{cornerRadius}*/;
+    -webkit-border-bottom-right-radius: 5px/*{cornerRadius}*/;
+    -khtml-border-bottom-right-radius: 5px/*{cornerRadius}*/;
+    border-bottom-right-radius: 5px/*{cornerRadius}*/;
+    -moz-border-radius-bottomleft: 5px/*{cornerRadius}*/;
+    -webkit-border-bottom-left-radius: 5px/*{cornerRadius}*/;
+    -khtml-border-bottom-left-radius: 5px/*{cornerRadius}*/;
+    border-bottom-left-radius: 5px/*{cornerRadius}*/;
+    -moz-border-radius-topright: 5px/*{cornerRadius}*/;
+    -webkit-border-top-right-radius: 5px/*{cornerRadius}*/;
+    -khtml-border-top-right-radius: 5px/*{cornerRadius}*/;
+    border-top-right-radius: 5px/*{cornerRadius}*/;
+    -moz-border-radius-topleft: 5px/*{cornerRadius}*/;
+    -webkit-border-top-left-radius: 5px/*{cornerRadius}*/;
+    -khtml-border-top-left-radius: 5px/*{cornerRadius}*/;
+    border-top-left-radius: 5px/*{cornerRadius}*/;
+    overflow: hidden;
+    /*   min-height: 100px; */
+    margin-bottom: 10px;
+    padding: 19px;
+    /*  background:url('/ilos/images/index/bg_notice.gif') no-repeat 0 top; */
+}
+div.submain-right .title{
+    font-size: 13px; font-weight:bold; color:#666; background-color: #f8f8f8; padding: 9px; border-bottom: 1px solid #ddd; text-align: center;
+}
+
+div.submain-notice .title{
+    font-size: 16px;
+    font-weight:bold;
+    font-family: 맑은 고딕, Malgun Gothic;
+    color:#434343;
+    margin-bottom: 19px;
+}
+
+div.submain-notice .week{
+    font-size: 16px;
+    font-weight:bold;
+    font-family: 맑은 고딕, Malgun Gothic;
+    background-color: #f6f7f5;
+    margin: -19px -19px 10px -19px;
+    padding: 10px 19px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+div.submain-notice .week-title{
+    font-size: 14px;
+    font-weight:bold;
+    font-family: 맑은 고딕, Malgun Gothic;
+    color: #666;
+    margin: 10px 0;
+}
+
+div.submain-notice .week-list{
+    /*   height: 18px; */
+    margin: 0;
+    padding-left: 6px;
+    line-height: 130%;
+    /*   background: url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px; */
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+div.submain-notice h3 {
+    margin:1px 0 0 1px;
+}
+
+div.submain-notice h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.submain-notice .submain-noticebox {
+    clear:both;
+    margin-top:12px;
+}
+
+div.submain-notice .submain-noticebox ol li {
+    height:20px;
+    margin:0;
+    padding-left:15px;
+    /*  font-size:95%; */
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 6px 6px;
+}
+
+div.submain-right .submain-noticebox ol li {
+    height:18px;
+    margin:0;
+    padding-left:6px;
+    padding-top : 2px;
+    padding-bottom : 2px;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 8px;
+}
+
+*html div.submain-notice .submain-noticebox ol li {
+    height:15px;
+    padding-top:1px;
+}
+
+*+html div.submain-notice .submain-noticebox ol li {
+    height:16px;
+}
+
+div.submain-notice .submain-noticebox ol li em {
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+div.submain-right .submain-noticebox ol li em {
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+div.submain-notice .submain-noticebox ol li em .course {
+    float:left;
+    width:58px;
+    margin:0;
+    padding:0;
+    letter-spacing:-1px;
+    font-weight:normal;
+}
+
+*html div.submain-notice .submain-noticebox ol li em .course {
+    width:55px;
+}
+
+div.submain-notice .submain-noticebox li .submain-date {
+    float:right;
+    margin:0;
+    padding:0;
+    font-size:11px;
+    color:#a6a6a6;
+    font-family:"arial";
+}
+
+div.submain-right .submain-noticebox li .submain-date {
+    float:right;
+    margin:0;
+    padding:0;
+    font-size:11px;
+    color:#969696;
+    font-family:"arial";
+}
+
+div.submain-notice .submain-noticebox li .complete {
+    float:right;
+    /*width:74px;*/
+    margin:0;
+    /*padding-right:17px;*/
+    font-size:100%;
+    color:#6c9f20;
+}
+
+div.submain-notice .submain-noticebox li .progress {
+    float:right;
+    /*width:74px;*/
+    margin:0;
+    /*padding-right:17px;*/
+    font-size:100%;
+    color:#969696;
+}
+
+div.submain-notice .submain-noticebox li .mark {
+    float:right;
+    width:64px;
+    margin:0;
+    padding-right:17px;
+    font-size:100%;
+    color:#16578F;
+    text-align:right;
+}
+
+div.submain-notice .submain-noticebox li .no-complete {
+    float:right;
+    /*width:74px;*/
+    margin:0;
+    /*padding-right:17px;*/
+    font-size:100%;
+    color:#ff8c40;
+}
+
+div.submain-notice .submain-noticebox li .submain-day {
+    float:left;
+    width:97px;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    color:#a6a6a6;
+    font-family:"arial";
+}
+
+*html div.submain-notice .submain-noticebox li .submain-day {
+    width:96px;
+    margin-top:-2px;
+}
+
+*+html div.submain-notice .submain-noticebox li .submain-day {
+    margin-top:-1px;
+}
+
+:root div.submain-notice .submain-noticebox li .submain-day {
+    width:96px;
+}
+
+body:first-of-type div.submain-notice .submain-noticebox li .submain-day {
+    width:96px;
+}
+
+div.submain-notice .submain-more {
+    position:absolute;
+    top:1px;
+    right:7px;
+    font-size:0;
+    line-height:0;
+}
+
+*html div.submain-notice .submain-more {
+    right:6px;
+}
+
+div.submain-reference {
+    position:relative;
+    float:left;
+    width:369px;
+    height:147px;
+    overflow:hidden;
+    background:url('/ilos/images/index/bg_notice.gif') no-repeat 0 top;
+}
+
+div.submain-reference h3 {
+    margin:1px 0 0 1px;
+}
+
+div.submain-reference h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.submain-reference .submain-referencebox {
+    float:left;
+    width:100%;
+    margin-top:18px;
+    padding-left:7px;
+    background:url('/ilos/images/index/bg_study.jpg') no-repeat 0 top;
+}
+
+div.submain-reference .submain-referencebox ol li {
+    height:18px;
+    margin-left:116px;
+    padding-left:8px;
+    font-size:95%;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px;
+}
+
+*html div.submain-reference .submain-referencebox ol li {
+    height:15px;
+    padding-top:1px;
+}
+
+*+html div.submain-reference .submain-referencebox ol li {
+    height:16px;
+}
+
+div.submain-reference .submain-referencebox ol li em {
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+div.submain-reference .submain-referencebox ol li em strong {
+    margin-right:9px;
+    color:#ff8c3f;
+}
+
+div.submain-reference .submain-referencebox li .submain-date {
+    float:right;
+    width:74px;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    font-family:"arial";
+    color:#a6a6a6;
+}
+
+div.submain-reference .submain-more {
+    position:absolute;
+    top:1px;
+    right:7px;
+    font-size:0;
+    line-height:0;
+}
+
+*html div.submain-reference .submain-more {
+    right:6px;
+}
+
+/* subcontent */
+div.planbox {
+    float:left;
+    width:709px;
+    height:434px;
+    margin-top:12px;
+    padding:0 10px 0 15px;
+    border:2px solid #ebebeb;
+    overflow:hidden;
+}
+
+div.plan-contscroll {
+    height:414px;
+    margin-top:10px;
+    padding-right:10px;
+    overflow-y:scroll;
+}
+
+div.fileupload {
+    position:relative;
+    width:738px;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+div.fileupload02 {
+    position:relative;
+    width:880px;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+div.project {
+    clear:both;
+    width:100%;
+    padding:9px 0;
+    background-color:#fbfbfb;
+    border-top:2px solid #dadada;
+    border-bottom:2px solid #dadada;
+    text-align:center;
+}
+
+*html div.project {
+    padding:8px 0;
+}
+
+*+html div.project {
+    padding:8px 0;
+}
+
+div.project img {
+    margin:-1px -4px 0 0;
+    font-size:0;
+    line-height:0;
+    vertical-align:middle;
+}
+
+*html div.project img {
+    margin:0 -4px -1px 0;
+}
+
+*+html div.project img {
+    margin:0 -4px -1px 0;
+}
+
+div.project .project-group {
+    margin-left:18px;
+}
+
+div.project select {
+    margin-left:12px;
+}
+
+div.project .department {
+    margin-left:25px;
+}
+
+div.project .hits {
+    margin:0 0 0 13px;
+}
+
+div.project .calendar {
+    margin:0 0 0 5px;
+}
+
+.qnaview {
+    padding-bottom: 10px;
+    font-family: 고딕, Malgun Gothic;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.replyview {
+    margin-top:20px !important;
+    font-size:0;
+    line-height:0;
+}
+
+div.member {
+    padding:0 0 7px 4px;
+    font-weight:bold;
+}
+
+div.assess {
+    position:relative;
+    width:738px;
+    height:24px;
+    margin:0;
+    overflow:hidden;
+}
+
+div.assess .ass-score {
+    float:left;
+}
+
+*html div.assess .ass-score {
+    margin-top:2px;
+}
+
+*+html div.assess .ass-score {
+    margin-top:1px;
+}
+
+div.assess .ass-rbutton {
+    float:right;
+}
+
+div.assess .ass-team {
+    float:left;
+    padding:1px 0 0 5px;
+    font-weight:bold;
+    color:#FFB513;
+}
+
+*html div.assess .ass-team {
+    padding:2px 0 0 5px;
+}
+
+div.team_line {
+    height:21px;
+    background:url('/ilos/images/professor/bg_team_dot.gif') repeat-x 0 bottom;
+}
+
+div.opinion {
+    margin:20px 0 3px 0;
+}
+
+div.progressbox {
+    width:100%;
+    margin:0;
+    border-bottom:1px solid #dadada;
+    overflow:hidden;
+}
+
+div.progressbox label {
+    float:left;
+    margin:0;
+    font-size:0;
+    line-height:0;
+}
+
+div.progressbox .progress_top {
+    width:100%;
+    padding:0;
+    border-top:2px solid #dadada;
+    border-bottom:1px solid #dadada;
+    background-color:#f9f9f9;
+    overflow:hidden;
+}
+
+div.progress_top .progress_title {
+    float:left;
+    padding:6px 0 4px 0;
+    font-weight:bold;
+    color:#666666;
+}
+/*isjo추가 팀프로젝트에 사용*/
+.progress_team {
+    float:left;
+    padding:6px 0 4px 0;
+    font-weight:bold;
+    color:#666666;
+}
+
+div.progress_btm .progress_title {
+    float:left;
+    padding:6px 0 4px 0;
+    font-weight:bold;
+    color:#666666;
+}
+
+div.progress_btm .progress_leader{
+    float:left;
+    padding:6px 0 4px 0;
+    font-weight:bold;
+}
+div.progress_btm .progress_member{
+    float:left;
+    padding:6px 0 4px 0;
+    font-weight:normal;
+    color:#666666;
+}
+
+
+*html div.progress_top .progress_title {
+    padding:7px 0 4px 0;
+}
+
+div.progressbox .progress_btm {
+    width:100%;
+    padding:0;
+}
+
+div.progress_btm .progress_member {
+    float:left;
+    padding:6px 0 4px 0;
+}
+
+*html div.progress_btm .progress_member {
+    padding:9px 0 3px 0;
+}
+
+div.progress_btm .progress_num {
+    font-size:80%;
+    font-weight:bold;
+    font-family:"tahoma";
+    letter-spacing:-1px;
+}
+
+div.listbox .teamlist_top {
+    width:723px;
+    padding:5px 0 4px 15px;
+    border-top:2px solid #dadada;
+    border-bottom:1px solid #dadada;
+    background-color:#f9f9f9;
+    overflow:hidden;
+}
+
+*html div.listbox .teamlist_top {
+    padding:6px 0 4px 15px;
+}
+
+div.listbox .teamlist_btm {
+    width:723px;
+    padding:5px 0 4px 15px;
+    border-bottom:1px solid #dadada;
+    overflow:hidden;
+}
+
+div.teamlist_btm .teamlist_num {
+    font-size:80%;
+    font-weight:bold;
+    font-family:"tahoma";
+    letter-spacing:-1px;
+}
+
+div.teamlist_top .teamlist_title {
+    float:left;
+    padding-top:1px;
+    font-weight:bold;
+}
+
+div.teamlist_top .teamlist_btn {
+    float:right;
+    padding-right:8px;
+}
+
+*html div.teamlist_top .teamlist_btn {
+    margin-top:-1px;
+}
+
+div.teamlist_top .teamlist_btn img {
+    float:left;
+    margin-right:4px;
+}
+
+div.teamlist_top .teamlist_btn span {
+    float:left;
+    padding:1px 10px 0 0;
+}
+
+*html div.teamlist_top .teamlist_btn span {
+    padding:2px 10px 0 0;
+}
+
+div.listbox .teamlist_cont {
+    padding:10px;
+    line-height:170%;
+}
+
+*html div.listbox .teamlist_cont {
+    padding:19px 0 25px 16px;
+}
+
+div.listbox .surveylist_cont {
+    padding:8px 0 16px 0;
+    line-height:170%;
+}
+
+*html div.listbox .surveylist_cont {
+    padding:9px 0 15px 0;
+}
+
+div.teamlist_cont .test-type {
+    padding:10px 0 0 15px;
+}
+
+div.teamlist_cont .test-type span {
+    font-weight:bold;
+    color:#FFB513;
+}
+
+div.teamlist_cont .test-explain {
+    padding-top:20px;
+}
+
+div.listbox .levelbox {
+    width:100%;
+    height:24px;
+    margin:0;
+    overflow:hidden;
+}
+
+div.levelbox .level-txt {
+    float:left;
+}
+
+*html div.levelbox .level-txt {
+    padding-top:1px;
+}
+
+div.levelbox .level-btn {
+    float:right;
+}
+
+div.level {
+    width:100%;
+    height:24px;
+    margin:0;
+    overflow:hidden;
+}
+
+div.register-txt {
+    width:100%;
+}
+
+div.option-txt {
+    width:100%;
+    height:24px;
+    margin:0;
+    overflow:hidden;
+    color:#ffb513;
+}
+
+/*  개설과정관리 */
+
+div.eclass_open_list {
+    clear:both;
+    width:100%;
+    padding:9px 0px 9px 0px;
+    background-color:#fbfbfb;
+    border-top:2px solid #dadada;
+    border-bottom:2px solid #dadada;
+
+}
+
+*html div.eclass_open_list {
+    padding:8px 0;
+}
+
+*+html div.eclass_open_list {
+    padding:8px 0;
+}
+
+div.eclass_open_list img {
+    margin:-1px -4px 0 0;
+    font-size:0;
+    line-height:0;
+    vertical-align:middle;
+}
+
+*html div.eclass_open_list img {
+    margin:0 -4px -1px 0;
+}
+
+*+html div.eclass_open_list img {
+    margin:0 -4px -1px 0;
+}
+
+
+div.eclass_open_list select {
+    margin-left:12px;
+}
+
+div.eclass_open_list ul{
+    list-style-type: none;
+}
+
+
+div.eclass_open_view {
+    clear:both;
+    width:100%;
+    padding:9px 0 9px 5px;
+    overflow: hidden;
+}

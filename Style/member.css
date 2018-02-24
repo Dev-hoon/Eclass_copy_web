@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+
+
+/* join */
+div.loginform-join {
+    width:738px;
+    margin-top:50px;
+    padding-bottom:169px;
+    overflow:hidden;
+    background:url('/ilos/images/member/bg_join.gif') no-repeat left top;
+}
+
+div.login-formjoingroup {
+    float:right;
+    width:408px;
+    padding-right:19px;
+}
+
+div.login-formjoingroup h4.agreement {
+    margin:0;
+    font-size:0;
+    line-height:0;
+}
+
+div.agreementbox {
+    width:383px;
+    height:235px;
+    margin-top:13px;
+    padding:0 10px 0 15px;
+    overflow:hidden;
+    background:url('/ilos/images/common/box/bg_agreementbox.gif') no-repeat 0 top;
+}
+
+div.agreement-contscroll {
+    height:215px;
+    padding-right:10px;
+    margin-top:10px;
+    overflow-y:scroll;
+}
+
+div.agreementbox h4 {
+    margin:0;
+    font-size:100%;
+}
+
+*html div.agreementbox h4 {
+    margin-top:1px;
+}
+
+:root div.agreementbox h4 {
+    margin-top:1px;
+}
+
+body:first-of-type div.agreementbox h4 {
+    margin-top:1px;
+}
+
+div.agreementbox h5 {
+    margin-top:19px;
+    font-size:100%;
+}
+
+:root div.agreementbox h5 {
+    margin-top:20px;
+}
+
+body:first-of-type div.agreementbox h5 {
+    margin-top:20px;
+}
+
+div.agreementbox h6 {
+    margin-top:14px;
+    font-size:100%;
+}
+
+:root div.agreementbox h6 {
+    margin-top:15px;
+}
+
+body:first-of-type div.agreementbox h6 {
+    margin-top:15px;
+}
+
+div.agreementbox li,
+div.agreementbox p {
+    margin-top:8px;
+    font-size:95%;
+    line-height:150%;
+}
+
+:root div.agreementbox li, :root div.agreementbox p {
+    margin-top:9px;
+}
+
+body:first-of-type div.agreementbox li, body:first-of-type div.agreementbox p {
+    margin-top:9px;
+}
+
+div.agreementbox li li {
+    margin:0 0 0 2px;
+    font-size:100%;
+}
+
+div.agreementbox .enforcement {
+    font-size:95%;
+}
+
+div.login-formjoingroup .button {
+    width:100%;
+    margin-top:11px;
+}
+
+div.button p {
+    float:left;
+}
+
+*html div.button p {
+    margin-top:2px;
+}
+
+*+html div.button p {
+    margin-top:1px;
+}
+
+:root div.button p {
+    margin-top:1px;
+}
+
+body:first-of-type div.button p {
+    margin-top:1px;
+}
+
+div.button .btntype {
+    float:right;
+}
+
+div.login-formjoingroup h4.join_info {
+    margin-left:8px;
+    font-size:0;
+    line-height:0;
+}
+
+div.login-formjoingroup .joinsummary {
+    margin:13px 0 0 8px;
+    font-size:12px;
+    line-height:120%;
+}
+
+div.login-formjoingroup div.formjoinbox {
+    float:right;
+    width:400px;
+    margin:9px 0 20px 0;
+}
+
+*html div.login-formjoingroup div.formjoinbox {
+    margin:8px 0 20px 0;
+}
+
+*+html div.login-formjoingroup div.formjoinbox {
+    margin:8px 0 20px 0;
+}
+
+div.login-formjoingroup div.formjoinbox input.txttype {
+    border:1px solid #f8a86d;
+}
+
+div.login-formjoingroup div.formjoinbox .btntype01 {
+    margin-left:2px;
+}
+
+div.cbutton {
+    clear:both;
+    width:100%;
+    margin:0;
+    padding-top:11px;
+    border-top:1px solid #d1d1d1;
+}
+
+div.cbutton .btntype02 {
+    float:left;
+    margin-left:132px;
+}
+
+div.cbutton .btntype03 {
+    float:left;
+    margin-left:7px;
+}

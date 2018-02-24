@@ -1,0 +1,48 @@
+@charset "utf-8";
+.sub_open {
+  text-align: left;
+  cursor: pointer;
+}
+.sub_close {
+  text-align: left;
+  cursor: pointer;
+  color: #A3A3A3 !important;
+}
+.m-box1{border: 1px #d2d2d2 solid; border-radius : 5px; -webkit-border-radius : 5px; -moz-border-radius : 5px; overflow:hidden; min-height:100px; margin-bottom: 6px;}
+.m-box1 > ol{margin-bottom: 19px;}
+.m-box1 > ol > li {padding: 5px 19px 5px 19px; clear: both; overflow: hidden;}
+.m-box1 > ol > li > em{font-weight: bold; color: #707070; letter-spacing: -1px; float: left;}
+.m-box1 > ol > li > span{color: #707070; letter-spacing: -1px; float: right;}
+.m-box2{border: 0px; overflow:hidden; }
+.m-box2 > ol{padding: 0 0px 0px 0px; overflow: hidden;}
+.m-box2 > ol > li {padding: 5px 0px 5px 0px; clear: both; overflow: hidden;}
+.m-box2 > ol > li > em{font-weight: bold; color: #757575; letter-spacing: 0px; float: left;}
+.m-box2 > ol > li > span{color: #9c9c9c; letter-spacing: 0px; float: right; font-size: 95%; margin-top: -1px;}
+.title-01{margin: 20px 0px 10px 0px; overflow: hidden; clear: both; line-height: 23px;}
+.title-01 > span{font-size: 18px; font-weight:bold; font-family:malgun gothic; float: left;}
+.title-01 > .more{float: right; margin-top: 3px; cursor: pointer;}
+.title-01 > .bar {float: left; height:17px; width: 4px; overflow: hidden; margin-right: 8px; margin-top: 6px;}
+.title-01 > .info {font-size: 14px; font-weight: bold; margin-top: 2px; margin-left:5px; color:#ff770b; letter-spacing: -1px;}
+.icon-box{padding:0px 0 10px 0 ; border: 1px #d2d2d2 solid; border-radius : 5px; -webkit-border-radius : 5px; -moz-border-radius : 5px;  background-color: #fafafa; text-align: center; overflow: hidden; background-image: url("/ilos/images/main/quickmenu_pt.png");}
+.icon-box .icon{display: inline-block; width: 60px; cursor: pointer; float: left; margin-top: 0px; padding: 10px 15px; overflow: hidden; height:63px;}
+.icon-box .icon .icon-nm{font-size: 12px; font-weight:bold; font-family:malgun gothic; color: #888; margin-top: 5px;}
+.icon-box .icon-bar{float: left; padding: 10px 0px 0 0px;}
+.cal-table{border-top: 1px solid #d2d2d2; border-right: 1px solid #d2d2d2; width: 307px; margin-left: 19px; margin-bottom: 19px;}
+.cal-table th{font-weight:normal; padding: 5px 10px; border-left: 1px solid #d2d2d2; text-align: center;border-bottom: 1px solid #d2d2d2; font-weight: bold;}
+.cal-table td{padding: 0px; border-left: 1px solid #d2d2d2; text-align: right;border-bottom: 1px solid #d2d2d2; vertical-align: top; height: 40px; padding: 3px; font-weight: bold; cursor: pointer;}
+.no-mon{background-color: #fafafa; color: #aaa;}
+.title-02{margin: 5px 19px 19px 19px; overflow: hidden;}
+.title-02 em{font-weight: bold; color: #707070; letter-spacing: -1px; float: left;}
+.title-03{margin: 5px 19px 5px 19px; overflow: hidden; clear: both;}
+.title-03 em{font-weight: bold; color: #707070; letter-spacing: -1px; float: left;}
+.title-04{margin: 10px 19px; overflow: hidden; clear: both; line-height: 23px;}
+.title-04 > span{font-size: 14px; font-weight:bold; font-family:malgun gothic; float: left;}
+.box-tab1{ }
+.box-tab1 .tab1{padding:8px 0; float: left; width: 91px; border-right: 1px solid #d2d2d2; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; text-align: center; background-color: #fafafa; cursor: pointer;}
+.box-tab1 .tab2{padding:8px 0; float: left; width: 91px; border-right: 1px solid #d2d2d2; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; text-align: center; background-color: #fafafa; cursor: pointer;}
+.box-tab1 .tab3{padding:8px 0; float: left; width: 91px; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; text-align: center; background-color: #fafafa; cursor: pointer;}
+.sel-tab{border-bottom: 0px !important; background-color: white !important;}
+.box-tab2{}
+.box-tab2 .tab1{padding:8px 0; float: left; width: 91px; border-right: 1px solid #d2d2d2; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; text-align: center; background-color: #fafafa; cursor: pointer;}
+.box-tab2 .tab2{padding:8px 0; float: left; width: 91px; border-right: 1px solid #d2d2d2; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; text-align: center; background-color: #fafafa; cursor: pointer;}
+.box-tab2 .tab3{padding:8px 0; float: left; width: 91px; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; text-align: center; background-color: #fafafa; cursor: pointer;}

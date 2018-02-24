@@ -1,0 +1,1205 @@
+@charset "utf-8";
+
+
+
+/* layout */
+#gnbIndex {
+    position:relative;
+    clear:both;
+    width:100%;
+    height:60px;
+    z-index:0;
+    background:url('/ilos/images/common/header/bg_gnbwarp.gif') no-repeat 0 0;
+}
+
+#gnbIndex h2 {
+    visibility:hidden;
+    height:0;
+    font-size:0;
+    line-height:0;
+}
+
+
+
+#contentsIndex {
+    width:878px;
+    margin:0 45px 0 45px;
+    padding-bottom : 20px;
+    overflow:hidden;
+}
+#contentsIndex h2,
+
+#contentsIndex .locationmap {
+
+    visibility:hidden;
+
+    height:0;
+
+    font-size:0;
+
+    line-height:0;
+
+}
+
+
+
+/* contents */
+div.index-leftarea {
+    float:left;
+    width:466px;
+    min-height:378px;
+    _height:378px;
+    margin:25px 43px 0 0;
+    padding:0;
+}
+
+div.index-rightarea {
+    float:left;
+    width:369px;
+    margin-top:25px;
+    overflow:hidden;
+}
+
+div.index-leftarea01 {
+    float:left;
+    width:466px;
+    min-height:528px;
+    _height:528px;
+    margin:25px 43px 0 0;
+    padding:0;
+}
+
+div.index-rightarea01 {
+    float:left;
+    width:369px;
+    /*height:528px;*/
+    margin-top:25px;
+}
+
+div.index-leftarea02 {
+    float:left;
+    width:578px;
+    /*height:696px;*/
+    _height:696px;
+    min-height:300px;
+    margin:25px 20px 0 0;
+    padding:0;
+}
+
+div.index-rightarea02 {
+    float:left;
+    width:277px;
+    /*height:696px;*/
+    _height:696px;
+    min-height:300px;
+    margin-top:25px;
+}
+
+
+
+div.searchIndex {
+    float:left;
+    width:466px;
+    height:106px;
+    margin-top:1px;
+}
+
+div.searchIndex .searchbox {
+    width:291px;
+    margin:22px 0 0 145px;
+    padding:0;
+}
+
+div.searchIndex .searchbox .label {
+    float:left;
+    margin:0;
+    padding:0;
+    font-size:0;
+    line-height:0;
+}
+
+div.searchIndex .searchbox .inputbar {
+    float:left;
+    height:26px;
+    margin:11px 0 0 0;
+}
+
+*html div.searchIndex .searchbox .inputbar {
+    height:28px;
+}
+
+*+html div.searchIndex .searchbox .inputbar {
+    height:27px;
+}
+
+:root div.searchIndex .searchbox .inputbar {
+    height:27px;
+}
+
+
+div.searchIndex .searchbox .txttype01 {
+
+    float:left;
+    width:209px;
+
+    height:14px;
+
+    padding:2px 2px 1px;
+
+    margin-right:7px;
+    border-top:1px solid #404040;
+    border-left:1px solid #404040;
+    border-right:1px solid #d4d0c8;
+    border-bottom:1px solid #d4d0c8;
+
+}
+
+
+div.searchIndex .searchbox .btntype {
+
+
+    float:left;
+    margin:0;
+
+}
+
+div.searchIndex .searchbox .chkbox {
+    float:left;
+    margin:0;
+}
+
+div.searchIndex .searchbox .chkbox label {
+    font-size:95%;
+    color:#fff;
+    letter-spacing:-1px;
+}
+
+div.scheduleIndex {
+    position:relative;
+    float:left;
+    width:466px;
+    margin-top:30px;
+    overflow:hidden;
+    background:url('/ilos/images/index/bg_schedule.gif') no-repeat 0 top;
+}
+
+div.scheduleIndex h3 {
+    margin:1px 0 0 1px;
+    font-size:120%;
+}
+
+div.scheduleIndex h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.scheduleIndex h3 em {
+    float:left;
+    margin-top:4px;
+    font-size:100%;
+    font-weight:bold;
+    color:#ffe2c3;
+}
+
+*html div.scheduleIndex h3 em {
+    margin-top:5px;
+}
+
+:root div.scheduleIndex h3 em {
+    margin-top:5px;
+}
+
+body:first-of-type div.scheduleIndex h3 em {
+    margin-top:5px;
+}
+
+
+div.scheduleIndex .schedulebox {
+
+    float:left;
+    width:463px;
+    margin-top:1px;
+    padding:0 2px 0 1px;
+
+}
+
+
+div.scheduleIndex .schedulebox ol li {
+
+    margin:0;
+    padding:8px 0 6px 0;
+
+    font-size:95%;
+
+
+
+    line-height:150%;
+    border-bottom:1px solid #d2d2d2;
+
+}
+
+*+html div.scheduleIndex .schedulebox ol li {
+    padding:7px 0;
+}
+
+
+div.scheduleIndex .schedulebox li .day {
+    float:left;
+    width:150px;
+    margin:0;
+    padding-left:22px;
+    font-size:100%;
+    font-weight:bold;
+    letter-spacing:-1px;
+    background:url('/ilos/images/common/bul/bul_dot01.gif') no-repeat 11px 7px;
+}
+
+*html div.scheduleIndex .schedulebox li .day {
+    width:150px;
+}
+
+*+html div.scheduleIndex .schedulebox li .day {
+    background:url('/ilos/images/common/bul/bul_dot01.gif') no-repeat 11px 8px;
+}
+
+
+div.scheduleIndex .more {
+
+    position:absolute;
+
+    top:1px;
+
+    right:1px;
+
+    font-size:0;
+
+    line-height:0;
+
+}
+
+
+
+div.noticeIndex {
+    position:relative;
+    float:left;
+    width:369px;
+    min-height:140px;
+    margin-bottom:20px;
+    overflow:hidden;
+    background:url('/ilos/images/index/bg_notice.gif') no-repeat 0 top;
+}
+
+div.noticeIndex h3 {
+    margin:1px 0 0 1px;
+}
+
+div.noticeIndex h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.noticeIndex .noticebox {
+    float:left;
+    width:100%;
+    margin-top:12px;
+    padding-left:7px;
+}
+
+div.noticeIndex .noticebox ol li {
+    height:18px;
+    margin:0;
+    padding-left:11px;
+    font-size:95%;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px;
+}
+
+*html div.noticeIndex .noticebox ol li {
+    height:15px;
+    padding-top:1px;
+}
+
+*+html div.noticeIndex .noticebox ol li {
+    height:16px;
+}
+
+div.noticeIndex .noticebox ol li em {
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+div.noticeIndex .noticebox li .date {
+    float:right;
+    width:74px;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    color:#a6a6a6;
+    font-family:"arial";
+}
+
+div.noticeIndex .noticebox li .complete {
+    float:right;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    color:#6c9f20;
+    margin-right: 15px;
+}
+
+div.noticeIndex .noticebox li .progress {
+    float:right;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    margin-right: 15px;
+}
+
+div.noticeIndex .noticebox li .no-complete {
+    float:right;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    color:#ff8c40;
+    margin-right: 15px;
+}
+
+*html div.noticeIndex .noticebox li .date {
+    width:73px;
+    margin-top:-2px;
+}
+
+*+html div.noticeIndex .noticebox li .date {
+    margin-top:-1px;
+}
+
+:root div.noticeIndex .noticebox li .date {
+    width:73px;
+}
+
+body:first-of-type div.noticeIndex .noticebox li .date {
+    width:73px;
+}
+
+div.noticeIndex .more {
+    position:absolute;
+    top:1px;
+    right:7px;
+    font-size:0;
+    line-height:0;
+}
+
+*html div.noticeIndex .more {
+    right:6px;
+}
+
+div.courseIndex {
+    position:relative;
+    float:left;
+    width:462px;
+    min-height:175px;
+    margin-top:19px;
+    padding:0 2px;
+    padding-bottom:20px;
+    /*overflow:hidden;*/
+}
+
+div.courseIndex h3 {
+    font-family: 맑은 고딕, Malgun Gothic;
+    font-size: 14px;
+}
+
+div.courseIndex .bar {
+    float: left; height:18px; width: 4px; overflow: hidden; margin-right: 7px; margin-top: 3px;
+}
+
+div.courseIndex h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.courseIndex h3 em {
+    margin-top:-1px;
+    font-size:100%;
+    font-weight:bold;
+    color:#ff5a00;
+}
+
+*html div.courseIndex h3 em {
+    margin-top:0;
+}
+
+:root div.courseIndex h3 em {
+    margin-top:0;
+}
+
+body:first-of-type div.courseIndex h3 em {
+    margin-top:0;
+}
+
+table.course-datatable {
+    width:100%;
+    table-layout:fixed;
+    margin-top:13px;
+    padding:0 0px;
+
+}
+
+*html table.course-datatable {
+    margin-top:12px;
+}
+
+/* unit 20110215 */
+/*
+table.course-datatable thead th {
+	height:26px;
+	padding:0;
+	vertical-align:top;
+	text-align:center;
+	font-size:0;
+	line-height:0;
+	background:none;
+}
+*/
+
+table.course-datatable thead th {
+    height:26px;
+    padding:0;
+    padding-top :2px;
+    vertical-align:middle;
+    text-align:center;
+    font-size:11px;
+    color:#FFFFFF;
+    background:none;
+    font-weight: normal;
+    background-color: #8B8B8B;
+}
+table.course-datatable thead th.first{
+    border-top-left-radius:4px;
+    /* border-top-right-radius:3px;
+    border-bottom-right-radius:3px; */
+    border-bottom-left-radius:4px;
+}
+table.course-datatable thead th.last{
+    /* border-top-left-radius:3px; */
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+    /* border-bottom-left-radius:3px; */
+}
+
+table.course-datatable thead th img {
+    padding-top:7px;
+    margin:0;
+    font-size:0;
+    line-height:0;
+}
+
+table.course-datatable td {
+    height:27px;
+    padding-top:3px;
+    font-family:"tahoma";
+    font-size:95%;
+    color:#9c9c9c;
+    text-align:center;
+    line-height:130%;
+    border-bottom:1px solid #d2d2d2;
+    background:url('/ilos/images/index/bg_course_line.gif') no-repeat right top;
+}
+
+table.course-datatable td.subject {
+    font-family:"돋움";
+    font-weight:bold;
+    font-size:100%;
+    color:#757575;
+    letter-spacing:-1px;
+}
+
+table.course-datatable td.pf {
+    font-family:"돋움";
+    font-size:95%;
+    color:#757575;
+    letter-spacing:-1px;
+}
+
+table.course-datatable td.last {
+    background:none;
+}
+
+div.todayIndex {
+    position:relative;
+    float:left;
+    width:462px;
+    /*min-height:175px;*/
+    padding:0 2px;
+    padding-bottom:60px;
+    /*overflow:hidden;*/
+}
+
+
+div.todayIndex h3 {
+    float:left;
+    margin:0;
+    font-size:100%;
+}
+
+div.todayIndex h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.todayIndex h3 em {
+    float:left;
+    margin-top:-1px;
+    font-size:100%;
+    font-weight:bold;
+    color:#ff5a00;
+}
+
+*html div.todayIndex h3 em {
+    margin-top:0;
+}
+
+:root div.todayIndex h3 em {
+    margin-top:0;
+}
+
+body:first-of-type div.todayIndex h3 em {
+    margin-top:0;
+}
+
+div.todayIndex .whole {
+    clear:both;
+    position:absolute;
+    top:0;
+    right:2px;
+    width:56px;
+    font-size:0;
+    line-height:0;
+}
+
+div.noticeIndex01 {
+    position:relative;
+    float:left;
+    width:369px;
+    min-height:155px;
+    margin-bottom:20px;
+    overflow:hidden;
+    background:url('/ilos/images/index/bg_notice.gif') no-repeat 0 top;
+}
+
+div.noticeIndex01 h3 {
+    margin:1px 0 0 1px;
+}
+
+div.noticeIndex01 h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.noticeIndex01 .noticebox01 {
+    float:left;
+    width:100%;
+    margin-top:12px;
+    padding-left:7px;
+}
+
+div.noticeIndex01 .noticebox01 ol li {
+    height:18px;
+    margin:0;
+    padding-left:11px;
+    font-size:95%;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px;
+}
+
+*html div.noticeIndex01 .noticebox01 ol li {
+    height:15px;
+    padding-top:1px;
+}
+
+*+html div.noticeIndex01 .noticebox01 ol li {
+    height:16px;
+}
+
+div.noticeIndex01 .noticebox01 ol li em {
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+div.noticeIndex01 .noticebox01 li .date {
+    float:right;
+    width:74px;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    color:#a6a6a6;
+    font-family:"arial";
+}
+
+*html div.noticeIndex01 .noticebox01 li .date {
+    width:73px;
+    margin-top:-2px;
+}
+
+*+html div.noticeIndex01 .noticebox01 li .date {
+    margin-top:-1px;
+}
+
+:root div.noticeIndex01 .noticebox01 li .date {
+    width:73px;
+}
+
+body:first-of-type div.noticeIndex01 .noticebox01 li .date {
+    width:73px;
+}
+
+div.noticeIndex01 .more {
+    position:absolute;
+    top:1px;
+    right:7px;
+    font-size:0;
+    line-height:0;
+}
+
+*html div.noticeIndex01 .more {
+    right:6px;
+}
+
+div.noticeIndex02 {
+    position:relative;
+    float:left;
+    width:369px;
+    height:175px;
+    overflow:hidden;
+    background:url('/ilos/images/index/bg_notice.gif') no-repeat 0 top;
+}
+
+div.noticeIndex02 h3 {
+    margin:1px 0 0 1px;
+}
+
+div.noticeIndex02 h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.noticeIndex02 .noticebox02 {
+    float:left;
+    width:100%;
+    margin-top:12px;
+    padding-left:7px;
+}
+
+div.noticeIndex02 .noticebox02 ol li {
+    height:18px;
+    margin:0;
+    padding-left:11px;
+    font-size:95%;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px;
+}
+
+*html div.noticeIndex02 .noticebox02 ol li {
+    height:15px;
+    padding-top:1px;
+}
+
+*+html div.noticeIndex02 .noticebox02 ol li {
+    height:16px;
+}
+
+div.noticeIndex02 .noticebox02 ol li em {
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+div.noticeIndex02 .noticebox02 li .date {
+    float:right;
+    width:74px;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    color:#a6a6a6;
+    font-family:"arial";
+}
+
+*html div.noticeIndex02 .noticebox02 li .date {
+    width:73px;
+    margin-top:-2px;
+}
+
+*+html div.noticeIndex02 .noticebox02 li .date {
+    margin-top:-1px;
+}
+
+:root div.noticeIndex02 .noticebox02 li .date {
+    width:73px;
+}
+
+body:first-of-type div.noticeIndex02 .noticebox02 li .date {
+    width:73px;
+}
+
+div.noticeIndex02 .more {
+    position:absolute;
+    top:1px;
+    right:7px;
+    font-size:0;
+    line-height:0;
+}
+
+*html div.noticeIndex02 .more {
+    right:6px;
+}
+
+div.studyIndex {
+    position:relative;
+    float:left;
+    width:369px;
+    /*height:155px;*/
+    min-height:164px;
+    overflow:hidden;
+    background:url('/ilos/images/index/bg_notice.gif') no-repeat 0 top;
+}
+
+div.studyIndex h3 {
+    margin:1px 0 0 1px;
+}
+
+div.studyIndex h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.studyIndex .studybox {
+    float:left;
+    width:100%;
+    margin-top:18px;
+    padding-left:7px;
+    /*background:url('/ilos/images/index/bg_study.jpg') no-repeat 0 top;*/
+}
+
+div.studyIndex .studybox ol li {
+    height:18px;
+    /*margin-left:116px;*/
+    padding-left:8px;
+    font-size:95%;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px;
+}
+
+*html div.studyIndex .studybox ol li {
+    height:15px;
+    padding-top:1px;
+}
+
+*+html div.studyIndex .studybox ol li {
+    height:16px;
+}
+
+div.studyIndex .studybox ol li em {
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+div.studyIndex .studybox ol li em strong {
+    margin-right:9px;
+    color:#ff8c3f;
+}
+
+div.studyIndex .studybox li .date {
+    float:right;
+    width:74px;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    font-family:"arial";
+    color:#a6a6a6;
+}
+
+*html div.studyIndex .studybox li .date {
+    width:73px;
+    margin-top:-2px;
+}
+
+*+html div.studyIndex .studybox li .date {
+    margin-top:-1px;
+}
+
+:root div.studyIndex .studybox li .date {
+    width:73px;
+}
+
+body:first-of-type div.studyIndex .studybox li .date {
+    width:73px;
+}
+
+div.studyIndex .more {
+    position:absolute;
+    top:1px;
+    right:7px;
+    font-size:0;
+    line-height:0;
+}
+
+*html div.studyIndex .more {
+    right:6px;
+}
+
+div.fileIndex {
+    position:relative;
+    float:left;
+    width:369px;
+    min-height:164px;
+    overflow:hidden;
+    background:url('/ilos/images/index/bg_file_header.gif') no-repeat 0 top;
+}
+
+div.fileIndex h3 {
+    margin:16px 0 0 27px;
+}
+
+div.fileIndex h3 img {
+    float:left;
+    font-size:0;
+    line-height:0;
+}
+
+div.fileIndex .filebox {
+    float:left;
+    width:344px;
+    margin-top:13px;
+    padding-left:24px;
+    margin-right:50px;
+    background:url('/ilos/images/index/bg_file_line.gif') repeat-y 0 top;
+}
+
+*html div.fileIndex .filebox {
+    margin-top:14px;
+}
+
+div.fileIndex .filebox ol li {
+    margin:0;
+    padding-left:4px;
+    font-size:95%;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px;
+    overflow:hidden;
+}
+/*
+*html div.fileIndex .filebox ol li {
+	height:18px;
+	background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 5px;
+}
+
+*+html div.fileIndex .filebox ol li {
+	height:18px;
+	overflow:hidden;
+}
+
+
+div.fileIndex .filebox ol li strong {
+	float:left;
+	width:64px;
+	margin:0;
+	color:#8c8c8c;
+	letter-spacing:-1px;
+}
+
+div.fileIndex .filebox li .graph {
+	float:left;
+	width:144px;
+	height:3px;
+	margin-top:4px;
+	padding:1px;
+	background:url('/ilos/images/index/bg_graph.gif') no-repeat 0 0;
+}
+*/
+
+div.fileIndex .filebox ol li strong {
+    float:left;
+    width:90px;
+    margin:0;
+    color:#8c8c8c;
+    letter-spacing:-1px;
+}
+
+div.fileIndex .filebox li .graph {
+    float:left;
+    width:100px;
+    height:3px;
+    margin-top:4px;
+    padding:1px;
+    border:1px solid #aaaaaa;
+    background: #dddddd;
+    /*background:url('/ilos/images/index/bg_graph.gif') no-repeat 0 0; */
+}
+
+*html div.fileIndex .filebox li .graph {
+    margin-top:3px;
+}
+
+
+div.fileIndex .filebox li .capacity {
+    float:right;
+    width:125px;
+    margin-top:-1px;
+    padding:0;
+    font-size:90%;
+    font-family:"tahoma";
+    color:#8b8b8b;
+    text-align:right;
+    padding-right:20px;
+}
+
+*html div.fileIndex .filebox li .capacity {
+    margin-top:-3px;
+}
+
+*+html div.fileIndex .filebox li .capacity {
+    margin-top:-2px;
+}
+
+/*isjo 추가*/
+
+div.fileIndex .filebox2 {
+    float:left;
+    width:344px;
+    height:35px;
+    margin-top:0px;
+    padding-left:24px;
+    margin-right:50px;
+    background:url('/ilos/images/index/bg_file_middle_bottom.gif') no-repeat 0 top;
+}
+
+div.fileIndex .filebox2 ol li {
+    height:20px;
+    margin:0;
+    padding-left:4px;
+    font-size:95%;
+    line-height:140%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 6px;
+}
+
+*html div.fileIndex .filebox2 ol li {
+    height:18px;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 5px;
+}
+
+*+html div.fileIndex .filebox2 ol li {
+    height:18px;
+}
+
+/*
+div.fileIndex .filebox ol li strong {
+	float:left;
+	width:64px;
+	margin:0;
+	color:#8c8c8c;
+	letter-spacing:-1px;
+}
+
+div.fileIndex .filebox li .graph {
+	float:left;
+	width:144px;
+	height:3px;
+	margin-top:4px;
+	padding:1px;
+	background:url('/ilos/images/index/bg_graph.gif') no-repeat 0 0;
+}
+*/
+
+div.fileIndex .filebox2 ol li strong {
+    float:left;
+    width:90px;
+    margin:0;
+    color:#8c8c8c;
+    letter-spacing:-1px;
+}
+
+div.fileIndex .filebox2 li .graph {
+    float:left;
+    width:100px;
+    height:3px;
+    margin-top:4px;
+    padding:1px;
+    border:1px solid #aaaaaa;
+    background: #dddddd;
+    /*background:url('/ilos/images/index/bg_graph.gif') no-repeat 0 0; */
+}
+
+*html div.fileIndex .filebox2 li .graph {
+    margin-top:3px;
+}
+
+
+div.fileIndex .filebox2 li .capacity {
+    float:right;
+    width:125px;
+    margin-top:-1px;
+    padding:0;
+    font-size:95%;
+    font-family:"tahoma";
+    color:#8b8b8b;
+    text-align:right;
+    padding-right:20px;
+}
+
+*html div.fileIndex .filebox2 li .capacity {
+    margin-top:-3px;
+}
+
+*+html div.fileIndex .filebox2 li .capacity {
+    margin-top:-2px;
+}
+
+/**관리자 파일용량 추가**/
+
+div.fileIndex2 {
+    position:relative;
+    overflow:hidden;
+    margin-top:30px;
+    background: #ebebeb;
+    border-radius:15px;
+}
+
+div.fileIndex2 .filebox {
+    position:relative;
+    margin:9px 9px;
+    background: #ffffff;
+    overflow:hidden;
+    border-radius:10px;
+    padding-bottom:10px;
+    border: 1px solid  #dfdddd;
+}
+
+*html div.fileIndex2 .filebox {
+    margin-top:14px;
+}
+
+div.fileIndex2 .filetitle {
+    font-size: 13px;
+    font-weight:bold;
+    padding:10px 0 0 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid  #dfdddd;
+}
+
+div.fileIndex2 .filebox ol li {
+    margin:0;
+    padding:3px 0 0 4px;
+    font-size:95%;
+    line-height:130%;
+    background:url('/ilos/images/common/bul/bul_dot02.gif') no-repeat 0 10px;
+    overflow:hidden;
+}
+
+div.fileIndex2 .filebox ol li .filelist {
+    float:left;
+    width:160px;
+    margin-top:1px;
+    letter-spacing:-1px;
+}
+
+div.fileIndex2 .filebox li .graph {
+    float:left;
+    width:200px;
+    height:3px;
+    margin-top:3px;
+    padding:1px;
+    border:1px solid #aaaaaa;
+    background: #dddddd;
+}
+
+*html div.fileIndex2 .filebox li .graph {
+    margin-top:2px;
+}
+
+div.fileIndex2 .filebox li .capacity {
+    float:right;
+    width:140px;
+    margin-top:-1px;
+    padding:0;
+    font-size:90%;
+    font-family:"tahoma";
+    color:#8b8b8b;
+    text-align:right;
+    padding-right:20px;
+}
+
+*html div.fileIndex2 .filebox li .capacity {
+    margin-top:-3px;
+}
+
+*+html div.fileIndex2 .filebox li .capacity {
+    margin-top:-2px;
+}
+
+div.quick-box {overflow:hidden;background:url('/ilos/images/index/quick_box.png') no-repeat 0 top;width:369px;margin-bottom:27px;}
+.quick-item-wrap {list-style:none;list-style-type:none;padding:16px 0 0 5px;width:369px;overflow:hidden;}
+.quick-item {float:left;overflow:hidden;text-align:center;margin-left:19px;cursor:pointer;}
+.quick-item-text {margin-top:3px;font-size:11px;font-family:malgun gothic;font-weight:bold;}
+
+.quick-item2 {float:left;overflow:hidden;text-align:center;margin-left:19px;cursor:pointer;margin-top:10px;}
+
+.quickTop {
+    height: 13px;
+    width:369px;
+    overflow:hidden;
+    background:url('/ilos/images/index/quick_box_top.png') no-repeat;
+}
+.quickMiddle {
+    width:369px;
+    background:url('/ilos/images/index/quick_box_middle.png') repeat-y 0 top;
+    overflow: hidden;
+}
+.quickBottom {
+    width:369px;
+    height: 13px;
+    margin-bottom:27px;
+    overflow:hidden;
+    background:url('/ilos/images/index/quick_box_bottom.png') no-repeat;
+}
+.quickBackground {
+    padding:0;
+    overflow: hidden;
+    width: 359px;
+    margin-left: 5px;
+    background: -webkit-linear-gradient(top, #FFFFFF, #efeeef);
+    background: -moz-linear-gradient(top, #FFFFFF, #efeeef);
+    background: -o-linear-gradient(top, #FFFFFF, #efeeef);
+    background: -ms-linear-gradient(top, #FFFFFF, #efeeef);
+    background: linear-gradient(#FFFFFF, #efeeef);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#FFFFFF, endColorStr=#efeeef);
+}
+
+div.outLinkIndex {
+    position:relative;
+    float:left;
+    width:466px;
+    margin-top:30px;
+    overflow:hidden;
+    background: #ebebeb;
+    border-radius:15px;
+}
+
+div.outLinkIndexinner {
+    margin:9px 9px;
+    position:relative;
+    width:446px;
+    overflow:hidden;
+    background: #ffffff;
+    border-radius:10px;
+    padding: 12px 0;
+}
