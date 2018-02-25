@@ -1,0 +1,40 @@
+.FAQ_head{
+    color: #666666;
+    font: bold 40px  tahoma, Arial, Helvetica, sans-serif;
+    display: block;
+    text-decoration: none;
+}
+
+.filter_main{
+    border: 2px solid #dadada;
+    background-color: #fbfbfb;
+}
+.filter_content{
+    padding: 20px 20px 20px 40px;
+}
+
+
+.FAQ_main_wrap{
+    display:flex;
+}
+.FAQ_main_wrap>*{
+    padding: 20px 20px 20px 0px;
+}
+.FAQ_left_wrap{ flex-grow: 2;}
+.FAQ_right_wrap{ flex-grow: 1;}
+.FAQ_content_table, .FAQ_content_side_table{
+    margin-bottom: 20px;
+}
+.FAQ_content_side_table{
+    margin-bottom: 20px;
+    border: 1px solid #bbbbbb;
+}
+.FAQ_content_title{
+    font: bold 25px tahoma, Arial, Helvetica, sans-serif;
+    padding:10px 10px;
+    background-color: #eeeeee;
+    border-bottom: 3px solid #3c8794;
+}
+.FAQ_content{
+
+}
