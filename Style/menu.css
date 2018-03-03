@@ -1,6 +1,6 @@
 .vertical_menu
 {
-	width: 180px; /*width of menu*/
+	width: 100px; /*width of menu*/
 	border-style: solid solid none solid;
 	border-color: #94AA74;
 	border-size: 1px;
@@ -32,13 +32,13 @@
 
 .vertical_menu li a:hover
 {
-	color: #26370A;
+	color: #146E7A;
 	background-position: 100% -32px;
 }
 
 	
 .vertical_menu li a.selected
 {
-	color: #26370A;
+	color: #146E7A;
 	background-position: 100% -64px;
 }
