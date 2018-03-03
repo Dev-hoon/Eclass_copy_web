@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 
 
 <!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,6 +19,8 @@
     <!-- 임의로 내가 추가!!!  -->
     <link rel="stylesheet" type="text/css" href="..\Style\menu.css">
     <link rel="stylesheet" type="text/css" href="..\Style\login.css">
+
+    <link rel="stylesheet" href="../Style/FAQ.css">
 
     <link type="text/css" rel="stylesheet" href="../Style/ass.css">
     <link type="text/css" rel="stylesheet" href="../Style/green.css">
@@ -430,41 +432,65 @@
 
             <div class="contentsIndex">
 
-                <div class="vertical_menu"style="float:left;display:block;">
-                    <ul>
-                        <li><a href="#" class="selected">로그인</a></li>
-                    </ul>
-                </div>
 
-                <div class="login_wrap">
-                    <h1 class="login_title"> 로그인</h1>
+                <div class="FAQ_wrap">
+                    <div class="FAQ_head">FAQ</div>
 
-                    <div class="login_content">
-
-                        <img id="login_img" src="../img/login_img.gif" alt="이미지_오류" >
-
-                        <form class="login_form" action="">
-                            <div id="input_box">
-
-                                <div class="login_tb">
-                                    <span id="login_id">아이디     </span>
-                                    <div id="input_id" ><input type="id" placeholder="아이디"></div>
-                                </div>
-
-                                <div class="login_tb">
-                                    <span>비밀번호  </span>
-                                    <div id="input_pw">  <input type="password" placeholder="비밀번호" ></div>
-                                </div>
-                                <div id="input_submit" ><input type="submit" value="로그인"></div>
-                            </div>
-                        </form>
+                    <div class="filter_wrap">
+                        <div class="filter_main">
+                            <form action="" class="filter_content"  > 대상 :
+                                <input type="checkbox" id="CB_common" value="common"> 공통
+                                <input type="checkbox" id="CB_professor" value="professor"> 교수
+                                <input type="checkbox" id="CB_student" value="student"> 학생
+                                <span style="margin-left: 100px;">검색</span>
+                                <input type="text" placeholder="내용을 입력해주세요.">
+                                <input type="submit" value="검색">
+                            </form>
+                        </div>
                     </div>
 
 
+                    <div class="FAQ_main_wrap">
+                        <div class="FAQ_left_wrap">
+                            <div class="FAQ_content_table">
+                                <div class="FAQ_content_title">시작하기</div>
+                                <div class="FAQ_content"></div>
+                            </div>
+                            <div class="FAQ_content_table">
+                                <div class="FAQ_content_title">청강하기</div>
+                            </div>
+                            <div class="FAQ_content_table">
+                                <div class="FAQ_content_title">팀티칭</div>
+                            </div>
+                            <div class="FAQ_content_table">
+                                <div class="FAQ_content_title">과제</div>
+                            </div>
+                            <div class="FAQ_content_table">
+                                <div class="FAQ_content_title">편의기능</div>
+                            </div>
+                            <div class="FAQ_content_table">
+                                <div class="FAQ_content_title">온라인 강의보기</div>
+                            </div>
+                        </div>
 
+                        <div class="FAQ_right_wrap">
+                            <div class="FAQ_content_side_table">
+                                <div class="FAQ_content_title">인기</div>
+                            </div>
+                            <div class="FAQ_content_side_table">
+                                <div class="FAQ_content_title">신규</div>
+                            </div>
+                            <div class="FAQ_content_side_table">
+                                <div class="FAQ_content_title">업데이트</div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-            </div>
+                    </div>
+
+                </div>
 
         </div>
     </div>
