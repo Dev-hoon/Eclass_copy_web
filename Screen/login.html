@@ -411,6 +411,7 @@
                     </ul>
                 </li>
             </ul>
+
             <script type="text/javascript">
                 $(function() {
                     initTopMenu();
@@ -423,10 +424,23 @@
         <hr>
 
     </div>
+
+    <script type="text/javascript">
+
+        function Check_blank(userId, userPassword){
+            if(userId === ""){
+                alert("아이디를 입력해주세요.");
+
+            }else if(userPassword===""){
+                alert("아이디를 입력해주세요.");
+            }
+        }
+    </script>
+
+
     <div id="containerWrap">
 
         <div id="container">
-
 
             <div class="contentsIndex">
 
@@ -443,19 +457,20 @@
 
                         <img id="login_img" src="../img/login_img.gif" alt="이미지_오류" >
 
-                        <form class="login_form" action="">
+                        <!-- 이렇게 작성할 경우 파일의 디렉토리 변경 시 로그인 오류가 생성 될 가능성이 있어보임. -->
+                        <form class="login_form" method="post" action="../server/loginaction.php" >
                             <div id="input_box">
 
                                 <div class="login_tb">
                                     <span id="login_id">아이디     </span>
-                                    <div id="input_id" ><input type="id" placeholder="아이디"></div>
+                                    <input type="id" name="userId" placeholder="아이디">
                                 </div>
 
                                 <div class="login_tb">
                                     <span>비밀번호  </span>
-                                    <div id="input_pw">  <input type="password" placeholder="비밀번호" ></div>
+                                    <input type="password" name="userPassword" placeholder="비밀번호" >
                                 </div>
-                                <div id="input_submit" ><input type="submit" value="로그인"></div>
+                                <input type="submit" value="로그인"></div>
                             </div>
                         </form>
                     </div>
@@ -468,6 +483,16 @@
 
         </div>
     </div>
+
+
+    /*
+        form 형태로 받은 데이터를 어디로 넘겨야 할지 정하지 못함.
+        개인적으로 기본적인 기능 구현 이외에 소스들을 대략적으로 정리.
+
+    */
+
+
+
 
 
 
