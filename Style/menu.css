@@ -1,44 +1,57 @@
+.vertical_menu_outside
+{
+	width: 138px;
+	border: 4px solid #CCCCCC;
+	border-radius: 10px;
+}
+
 .vertical_menu
 {
-	width: 100px; /*width of menu*/
-	border-style: solid solid none solid;
-	border-color: #94AA74;
-	border-size: 1px;
-	border-width: 1px;
+	width: 130px; /*width of menu*/
+	border: 4px solid #FFFFFF;
+	border-radius: 10px;
+	background-color: #F1F0F0;	/*light grey*/
+}
+
+.vertical_menu_title
+{
+	text-align: center;
+	margin: 10px 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #3C878C;	/*green*/
+	font: normal bold 18px "맑은고딕";
 }
 
 .vertical_menu ul
 {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	list-style: none;
+	text-align: left;
+	padding: 0px 5px;
 }
 	
 .vertical_menu li a
 {
-	font: bold 12px tahoma, Arial, Helvetica, sans-serif;
+	font: normal normal 12px "맑은고딕";
 	display: block;
-	background: transparent url(http://store.blueb.co.kr/data/201009/IJ12846667513972.vertical_menu.gif) 100% 0;
-	height: 24px; /*Set to height of bg image- padding within link (ie: 32px - 4px - 4px)*/
-	padding: 4px 0 4px 10px;
-	line-height: 24px; /*Set line-height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	color: black;
+	height: 24px;
+	margin: 2px;
 	text-decoration: none;
 }	
 
-.vertical_menu li a:link, .vertical_menu li a:visited 
-{
-	color: #5E7830;
-}
-
 .vertical_menu li a:hover
 {
-	color: #146E7A;
-	background-position: 100% -32px;
+	background-color: #3C878C;
+	color: #FFFFFF;
 }
 
 	
 .vertical_menu li a.selected
 {
-	color: #146E7A;
-	background-position: 100% -64px;
+	background-color: #3C878C;
+	color: #FFFFFF;
 }
+
+
+
