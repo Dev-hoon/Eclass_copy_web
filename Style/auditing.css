@@ -1,11 +1,35 @@
-
-.division
+.division_left
 {
-	display: inline;
+	display: block;
+	float: left;
+	width: 25%;
+}
+
+.division_right
+{
+	display: block;
+	float: right;
+	width: 75%;
 }
 
 .page_contents
 {
 	
 
+}
+
+.page_title
+{
+
+}
+
+.Option
+{
+	background-color: #F8F8F8;
+	border: 2px solid #CCCCCC;
+	border-left: none;
+	border-right: none;
+	text-align: center;
+	padding: 10px 0px;
+	font: normal normal 12px "맑은고딕";
 }

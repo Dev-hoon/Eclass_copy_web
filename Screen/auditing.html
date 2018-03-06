@@ -10,7 +10,7 @@
 	<!--css를 불러오기 위한 링크 태그 끝-->
 </head>
 <body>
-	<div class="division">
+	<div class="division_left">
 		<!--세로메뉴-->
 		<div class="vertical_menu_outside">
 			<div class="vertical_menu">
@@ -26,30 +26,32 @@
 		<!--세로메뉴 끝-->
 	</div>
 
-	<div class="division">
+	<div class="division_right">
 		<!--청강신청-->
 		<div class="page_contents">
-			<div>
+			<div id="page_title">
 				<div>정규과목 (청강신청)</div>
-				<div><img src=""> > <a href="">교육현황</a> > <a href="">정규과목 (청강신청)</a> </div>
+				<div><a href="./Eclass_main.html"><img src="../image/home.png"></a> > <a href="./auditing.html">교육현황</a> > <a href="./auditing.html">정규과목 (청강신청)</a> </div>
 			</div>
-			<div>
+			<div class="Option">
 				대학구분
-				<ul>
-					<li>전체</li>
-					<li>학부</li>
-					<li>대학원</li>
-					<li>통번역대학원</li>	
-					<li>교육대학원 Graduate</li>
-					<li>정치행정언론대학원</li>
-					<li>국제지역대학원</li>
-					<li>경영대학원(주간)</li>
-					<li>경영대학원(야간)</li>
-					<li>TESOL 대학원</li>
-					<li>TESOL 전문교육원</li>
-				</ul>
+				<select>
+					<option>전체</option>
+					<option>학부</option>
+					<option>대학원</option>
+					<option>통번역대학원</option>
+					<option>교육대학원 Graduate</option>
+					<option>정치행정언론대학원</option>
+					<option>국제지역대학원</option>
+					<option>경영대학원(주간)</option>
+					<option>경영대학원(야간)</option>
+					<option>TESOL 대학원</option>
+					<option>TESOL 전문교육원</option>
+				</select>
 
-				검색어 
+				검색어
+				<input type="input" name="course_search">
+				<button>search</button>
 			</div>
 			<div>
 				현재 진행중인 과목에 대해서 조회 됩니다.<br>
