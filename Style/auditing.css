@@ -20,6 +20,22 @@
 
 .page_title
 {
+	border-bottom: 
+}
+
+#title
+{
+	font: normal bold 20px "맑은고딕";
+	color: #6D6B6B;
+	display: inline;
+}
+
+#links
+{
+	font: normal normal 10px "맑은고딕";
+	display: inline;
+	text-align: left;
+	text-decoration: none;
 
 }
 
@@ -32,4 +48,24 @@
 	text-align: center;
 	padding: 10px 0px;
 	font: normal normal 12px "맑은고딕";
+}
+
+#notice
+{
+	font: normal normal 12px "맑은고딕";
+	margin: 15px 20px 0px 0px;
+}
+
+.course_table
+{
+	
+}
+
+.course_table thead
+{
+	text-align: center;
+	font: normal normal 14px "맑은고딕";
+	color: #FFFFFF;
+	background-color: #6D6B6B;
+
 }
