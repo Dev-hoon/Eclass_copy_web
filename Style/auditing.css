@@ -12,31 +12,27 @@
 	width: 75%;
 }
 
-.page_contents
+.page_title a:link
 {
 	
-
+	text-decoration: none;
 }
 
-.page_title
-{
-	border-bottom: 
-}
-
-#title
+.title
 {
 	font: normal bold 20px "맑은고딕";
 	color: #6D6B6B;
-	display: inline;
+	display: flex;
+	justify-content: flex-start
 }
 
-#links
+.links
 {
 	font: normal normal 10px "맑은고딕";
-	display: inline;
+	display: flex;
 	text-align: left;
-	text-decoration: none;
-
+	
+	justify-content: flex-end;
 }
 
 .Option
@@ -61,11 +57,28 @@
 	
 }
 
-.course_table thead
+.course_table table
 {
 	text-align: center;
-	font: normal normal 14px "맑은고딕";
+	font: normal normal 12px "맑은고딕";
+	border-collapse: collapse;
+	width: 100%;
+
+	
+}
+
+.course_table th
+{
+	text-align: center;
+	font: normal normal 12px "맑은고딕";
 	color: #FFFFFF;
 	background-color: #6D6B6B;
+	padding: 5px 0px;
+}
 
+.course_name
+{
+	text-align: left;
+	padding-left: 2%;
+	width: 25%;
 }
