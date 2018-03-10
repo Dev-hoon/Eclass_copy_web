@@ -1,5 +1,11 @@
-<!doctype html>
+<?php
+mysql_connect('localhost', 'root', '111111');
+mysql_select_db('opentutorials');
+$list_result = mysql_query('SELECT * FROM topic');
 
+?>
+
+<!doctype html>
 
 <!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 -->
@@ -425,6 +431,9 @@
         <hr>
 
     </div>
+
+    
+
     <div id="containerWrap">
 
         <div id="container">
@@ -452,37 +461,21 @@
 
                     <div class="FAQ_main_wrap">
                         <div class="FAQ_left_wrap">
-                            <div class="FAQ_content_table">
-                                <div class="FAQ_content_title">시작하기</div>
-                                <div class="FAQ_content"></div>
-                            </div>
-                            <div class="FAQ_content_table">
-                                <div class="FAQ_content_title">청강하기</div>
-                            </div>
-                            <div class="FAQ_content_table">
-                                <div class="FAQ_content_title">팀티칭</div>
-                            </div>
-                            <div class="FAQ_content_table">
-                                <div class="FAQ_content_title">과제</div>
-                            </div>
-                            <div class="FAQ_content_table">
-                                <div class="FAQ_content_title">편의기능</div>
-                            </div>
-                            <div class="FAQ_content_table">
-                                <div class="FAQ_content_title">온라인 강의보기</div>
-                            </div>
+
+                        <div class="FAQ_content_table">
+                            
+                        <?php include_once "../server/FAQ-ADO.php";
+
+                            call_left();
+                        ?>
+
+                        </div>
                         </div>
 
                         <div class="FAQ_right_wrap">
-                            <div class="FAQ_content_side_table">
-                                <div class="FAQ_content_title">인기</div>
-                            </div>
-                            <div class="FAQ_content_side_table">
-                                <div class="FAQ_content_title">신규</div>
-                            </div>
-                            <div class="FAQ_content_side_table">
-                                <div class="FAQ_content_title">업데이트</div>
-                            </div>
+                           <?php include_once "../server/FAQ-ADO.php";
+                            call_right();
+                            ?>
                         </div>
 
                     </div>
