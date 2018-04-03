@@ -1,8 +1,10 @@
-<?php   
-if(!isset($_COOKIE['PHPSESSID'])){
-   SESSION_start();
-}
+<?php
+mysql_connect('localhost', 'root', '111111');
+mysql_select_db('opentutorials');
+$list_result = mysql_query('SELECT * FROM topic');
+
 ?>
+
 <!doctype html>
 
 <!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -458,7 +460,23 @@ if(!isset($_COOKIE['PHPSESSID'])){
 
 
                     <div class="FAQ_main_wrap">
-                        <?php include "../php/FAQ.php";?>
+                        <div class="FAQ_left_wrap">
+
+                        <div class="FAQ_content_table">
+                            
+                        <?php include_once "../server/FAQ-ADO.php";
+
+                            call_left();
+                        ?>
+
+                        </div>
+                        </div>
+
+                        <div class="FAQ_right_wrap">
+                           <?php include_once "../server/FAQ-ADO.php";
+                            call_right();
+                            ?>
+                        </div>
 
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <?php
   $mysql_hostname = 'localhost';
   $mysql_username = 'root';
-  $mysql_password = 'root123';
+  $mysql_password = 'mysql0101';
   $mysql_database = 'eclass_db';
   $mysql_port = '3306';
   $mysql_charset = 'utf8';
